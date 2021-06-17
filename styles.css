@@ -95,3 +95,8 @@ footer p {
 footer a {
     padding-right: 10px;
 }
+
+#emf {
+    padding-top: 10px;
+    font-size: 16px;
+}
