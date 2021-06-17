@@ -76,3 +76,8 @@ body {
     font-size: 25px;
     background-color: rgba(0.0, 0.0, 0.0, 0.3);
 }
+
+#emf {
+    padding-top: 10px;
+    font-size: 16px;
+}
