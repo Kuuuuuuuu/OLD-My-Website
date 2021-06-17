@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-/*nav bar*/
-
 * {
     box-sizing: border-box;
     padding: 0;
@@ -23,7 +21,7 @@ body {
     flex-direction: column;
 }
 
-#nav_bar {
+#bar {
     position: fixed;
     width: 100%;
     display: flex;
@@ -34,7 +32,7 @@ body {
     z-index: 100;
 }
 
-.nav_link, #dis_btn {
+.link, #discord {
     font-family: Montserrat;
     font-weight: 500;
     font-size: 16px;
@@ -46,20 +44,20 @@ body {
     cursor: pointer;
 }
 
-#nav_tabs {
+#tab {
     list-style: none;
 }
 
-#nav_tabs li {
+#tab li {
     display: inline-block;
     padding: 0px 20px;
 }
 
-#nav_tabs a:hover {
+#tab a:hover {
     color: #0088a9;
 }
 
-#dis_btn {
+#discord {
     padding: 9px 29px;
     background-color: #3399ff;
     border: none;
@@ -67,21 +65,14 @@ body {
     cursor: pointer;
 }
 
-#dis_btn:hover {
+#discord:hover {
     background-color: #0088a9;
 }
 
-/*Wlcome Panel*/
-
-#wel_panel {
+#panel {
     text-align: center;
     padding: 75px 0px 75px 0px;
     align-content: center;
     font-size: 25px;
     background-color: rgba(0.0, 0.0, 0.0, 0.3);
-}
-
-#emf {
-    padding-top: 10px;
-    font-size: 16px;
 }
