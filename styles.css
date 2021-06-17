@@ -23,7 +23,7 @@ body {
     flex-direction: column;
 }
 
-#panel_bar {
+#bar_index {
     position: fixed;
     width: 100%;
     display: flex;
