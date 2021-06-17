@@ -79,23 +79,6 @@ body {
     background-color: rgba(0.0, 0.0, 0.0, 0.3);
 }
 
-footer {
-    margin-top: auto;
-    padding: 10px 0px 10px 0px;
-    background-color: #24252a;
-    text-align: center;
-}
-
-footer p {
-    font-size: 16px;
-    font-family: Montserrat;
-    padding: 5px;
-}
-
-footer a {
-    padding-right: 10px;
-}
-
 #emf {
     padding-top: 10px;
     font-size: 16px;
