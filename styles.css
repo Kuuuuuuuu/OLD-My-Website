@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
+//Hee
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -44,20 +46,20 @@ body {
     cursor: pointer;
 }
 
-#tab {
+#tab_panel {
     list-style: none;
 }
 
-#tab li {
+#tab_panel li {
     display: inline-block;
     padding: 0px 20px;
 }
 
-#tab a:hover {
+#tab_panel a:hover {
     color: #0088a9;
 }
 
-#discord {
+#discord_button {
     padding: 9px 29px;
     background-color: #3399ff;
     border: none;
@@ -65,11 +67,11 @@ body {
     cursor: pointer;
 }
 
-#discord:hover {
+#discord_button:hover {
     background-color: #0088a9;
 }
 
-#panel {
+#panel_index {
     text-align: center;
     padding: 75px 0px 75px 0px;
     align-content: center;
