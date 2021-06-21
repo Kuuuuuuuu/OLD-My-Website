@@ -72,10 +72,10 @@ body {
 }
 
 #panel_font {
+    font-family: Montserrat;
     text-align: center;
     padding: 75px 0px 75px 0px;
     align-content: center;
-    font-family: Montserrat;
     font-size: 25px;
     background-color: rgba(0.0, 0.0, 0.0, 0.3);
 }
