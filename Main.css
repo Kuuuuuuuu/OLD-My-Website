@@ -23,18 +23,7 @@ body {
     flex-direction: column;
 }
 
-#bar_index {
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 10%;
-    background-color: #2e2e2e;
-    z-index: 100;
-}
-
-.link_button, #discord_button {
+#discord_button {
     font-family: Montserrat;
     font-weight: 500;
     font-size: 16px;
@@ -44,6 +33,38 @@ body {
 
 #earth_logo {
     cursor: pointer;
+}
+
+#cm {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10%;
+    background-color: #24252a;
+    z-index: 100;
+}
+
+#cm_tabs {
+    list-style: none;
+}
+
+#cm_tabs li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+#cm_tabs a:hover {
+    color: #0088a9;
+}
+
+.link {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 15px;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 #tab_panel {
