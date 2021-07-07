@@ -110,7 +110,6 @@ body {
 .ripple {
    width: 10px;
    height: 10px;
-   background: url(res/bg.jpg);
    background-color: transparent;
    position: fixed;
    border-radius: 50%;
