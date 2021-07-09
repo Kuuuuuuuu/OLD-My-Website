@@ -107,6 +107,14 @@ body {
     color: #ffffff;
 }
 
+#typewritter {
+    font-family: Montserrat;
+    text-align: center;
+    padding: 75px 0px 75px 0px;
+    align-content: center;
+    color: #ffffff;
+}
+
 .ripple {
    width: 10px;
    height: 10px;
