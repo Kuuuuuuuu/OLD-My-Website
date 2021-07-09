@@ -1,7 +1,7 @@
 var i = 0;
 var txt = 'Complexity Network';
 var speed = 50;
-document.animationstart = () => typeWriter(event);
+document.load = () => typeWriter(event);
 
 function typeWriter() {
   if (i < txt.length) {
