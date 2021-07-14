@@ -14,7 +14,22 @@
     </head>
     <body>
     <script src="script.js"></script>
-    <script src="typewriter.js"></script>
+    <script>
+    <script type="text/javascript">
+      window.onabort = typeWriter();
+var i = 0;
+var txt = 'Complexity Practice';
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("type").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+
           <header id="cm">
             <img id="com_logo" src="res/logo_dark.png" alt="com_logo" width="75"/>
             <nav>
