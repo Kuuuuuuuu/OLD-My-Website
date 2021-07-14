@@ -107,6 +107,14 @@ body {
     color: #ffffff;
 }
 
+#type {
+    font-family: Montserrat;
+    text-align: center;
+    padding: 75px 0px 75px 0px;
+    align-content: center;
+    color: #ffffff;
+}
+
 #typewriter {
     font-family: Montserrat;
     text-align: center;
