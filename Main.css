@@ -43,7 +43,7 @@ body {
     align-items: center;
     padding: 0px 10%;
     background-color: #24252a;
-    z-index: 100;
+    z-index: 999999;
 }
 
 #cm_tabs {
