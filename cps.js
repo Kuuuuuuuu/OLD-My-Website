@@ -2,7 +2,7 @@ let box = document.querySelector(".box");
 let time = document.querySelector(".time");
 let clicks = document.querySelector(".clicks");
 let click = 0;
-let sec = 10;
+let sec = 5;
 
 let clickElement = document.createElement("div");
 clickElement.setAttribute("class","box");
@@ -25,17 +25,17 @@ function loop() {
       document.querySelector("h1").innerHTML = `Your click speed is ${click/5} CPS<br>${click} clicks in 5 seconds `;
       clickElement.replaceWith(box);
       click = 0;
-      sec = 10;
+      sec = 5;
      }
   }, 1000);
 }
 
 function stopwatch(){
-  if(sec == 10) {
+  if(sec == 5) {
      loop();
   }
   setInterval(() => {
-    time.innerHTML = "${sec} Seconds Left";
+    time.innerHTML = `${sec} Seconds Left`;
   }, 1000);
 }
 
