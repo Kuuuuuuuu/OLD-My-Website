@@ -27,11 +27,11 @@ function stopwatch(){
                             btn.addEventListener("click",function(){
                                 location.reload();
                             })
-                            click = 0;
                             time.style.display = "none";
                             clicks.innerHTML = "";
                             document.querySelector("h1").innerHTML = `Your click speed is ${click/5} CPS<br>${click} clicks in 5 seconds `;
-                            clickElement.replaceWith(box);  
+                            clickElement.replaceWith(box);
+                            click = 0;  
                         }, 20);
                     }, 1000);
                 }, 1000);
