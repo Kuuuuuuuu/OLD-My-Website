@@ -31,7 +31,9 @@ function loop() {
    loop();
    setInterval(() => {
      time.innerHTML = `${sec} Seconds Left`;
-     document.querySelector("h1").innerHTML = `Your click speed is ${click/5} CPS<br>${click} Clicks`;
+     if(sec !== 0) {
+        document.querySelector("h1").innerHTML = `Your click speed is ${click/5} CPS<br>${click} Clicks`;
+     }
    }, 1);
  }
 
