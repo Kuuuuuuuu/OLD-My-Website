@@ -20,8 +20,9 @@
   <link rel="stylesheet" href="home.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body onload="startTime()">
+<body onload="startTime(); typeWriter();">
   <script src="clock.js"></script>
+  <script src="TypeWitter.js"></script>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid container">
       <a class="navbar-brand" href="/">
@@ -31,7 +32,7 @@
   </nav>
   </div>
   <div class="jumbotron text-center bg-transparent">
-    <h3 class="display-3 htext">KohakuChan</h3>
+    <div id="witter"></div>
     <p class="lead ltext">KohakuChan Information Website</p>
     <a href="https://discord.dripsquad.ga"><button class="glow-on-hover">Join My Discord</button></a>
     <br>
