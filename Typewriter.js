@@ -1,7 +1,6 @@
 var i = 0;
 var txt = 'KohakuChan';
 var speed = 50;
-GlobalEventHandlers.onload = () => typeWriter(event);
 
 function typeWriter() {
   if (i < txt.length) {
