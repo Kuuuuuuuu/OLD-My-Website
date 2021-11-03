@@ -1,6 +1,6 @@
 var i = 0;
 var txt = 'KohakuChan';
-var speed = 50;
+var speed = 20;
 
 function typeWriter() {
   if (i < txt.length) {
