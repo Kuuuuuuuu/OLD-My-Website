@@ -1,14 +1,3 @@
-const checkbox = document.getElementById('flexSwitchCheckDefault');
-    checkbox.addEventListener('change', function () {
-        if (this.checked) {
-            document.body.style.backgroundColor = "#1c1c1c";
-            document.body.style.color = "#c9d1d9";
-        } else {
-            document.body.style.backgroundColor = "white";
-            document.body.style.color = "black";
-        }
-    })
-
        async function clickEvent(id) {
             const button = document.getElementById(id);
             if (button.innerText === "⠀") {
