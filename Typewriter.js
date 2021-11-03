@@ -1,6 +1,6 @@
-var i = 0;
-var txt = 'KohakuChan';
-var speed = 100;
+let i = 0;
+const txt = 'KohakuChan';
+const speed = 100;
 
 function typeWriter() {
   if (i < txt.length) {
