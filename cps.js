@@ -31,16 +31,18 @@ function loop() {
    loop();
    setInterval(() => {
      time.innerHTML = `${sec} Seconds Left`;
-     if(sec !== 0) {
-        document.querySelector("h1").innerHTML = `Your click speed is ${click/5} CPS<br>${click} Clicks`;
-     }
    }, 1);
+ }
+ 
+ function addClick(){
+   click++;
+   document.querySelector("h1").innerHTML = `Your click speed is ${click/5} CPS<br>${click} Clicks`;
  }
 
  box.addEventListener('click',function(){
     stopwatch();
     box.replaceWith(clickElement);
     btn.style.display = "none";
-    clickElement.addEventListener('click',function(){ click++; })
+    clickElement.addEventListener('click',function(){ addClick(); })
 })
 //Nah please not use this code it bug he
