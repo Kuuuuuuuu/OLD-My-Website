@@ -16,34 +16,6 @@ body {
    background-color: #131b21;
 }
 
-#button {
-    font-family: Montserrat;
-    font-weight: 500;
-    font-size: 16px;
-    color: #edf0f1;
-    text-decoration: none;
-}
-
-#button {
-    padding: 9px 29px;
-    background-color: #3399ff;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-}
-
-#button:hover {
-    background-color: #0088a9;
-}
-
-#text {
-    font-family: Montserrat;
-    text-align: center;
-    padding: 75px 0px 75px 0px;
-    align-content: center;
-    color: #ef08ff;
-}
-
 #preloader {
   position: fixed;
   top: 0;
