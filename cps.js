@@ -29,7 +29,6 @@ function stopwatch(){
                             })
                             time.style.display = "none";
                             clicks.innerHTML = "";
-                            document.querySelector("h1").innerHTML = `Your click speed is ${click/5} CPS<br>${click} clicks in 5 seconds `;
                             clickElement.replaceWith(box);
                             click = 0;  
                         }, 20);
@@ -48,7 +47,7 @@ box.addEventListener('click',function(){
     btn.style.display = "none";
     click = 0;
     clickElement.addEventListener('click',function(){
-       document.querySelector("h1").innerHTML = `Your click speed is ${click/5} CPS<br>${click}Clicks`;
+       document.querySelector("h1").innerHTML = `Your click speed is ${click/5} CPS<br>${click} Clicks`;
        click++;
        clicks.innerHTML = click;
     })
