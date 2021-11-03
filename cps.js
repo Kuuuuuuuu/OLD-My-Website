@@ -2,7 +2,7 @@ let box = document.querySelector(".box");
 let time = document.querySelector(".time");
 let clicks = document.querySelector(".clicks");
 let click = 0;
-ler sec = 10;
+let sec = 10;
 
 let clickElement = document.createElement("div");
 clickElement.setAttribute("class","box");
