@@ -1,11 +1,11 @@
 let box = document.querySelector(".box");
 let time = document.querySelector(".time");
 let clicks = document.querySelector(".clicks");
+let click = 0;
 
 let clickElement = document.createElement("div");
 clickElement.setAttribute("class","box");
 
-// function for 5 seconds
 let btn = document.querySelector(".btn");
 btn.style.display = "none";
 function stopwatch(){
@@ -27,6 +27,7 @@ function stopwatch(){
                             btn.addEventListener("click",function(){
                                 location.reload();
                             })
+                            click = 0;
                             time.style.display = "none";
                             clicks.innerHTML = "";
                             document.querySelector("h1").innerHTML = `Your click speed is ${click/5} CPS<br>${click} clicks in 5 seconds `;
@@ -43,16 +44,12 @@ box.addEventListener('click',function(){
     stopwatch();
     click = 1;
     clicks.innerHTML = click;
-
     box.replaceWith(clickElement);
-
     btn.style.display = "none";
     click = 0;
     clickElement.addEventListener('click',function(){
-
-        click = click + 1;
-        // click is the clicks entered by the user
-        clicks.innerHTML = click;
+       click++;
+       clicks.innerHTML = click;
     })
 })
 
