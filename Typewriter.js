@@ -5,7 +5,7 @@ GlobalEventHandlers.onload = () => typeWriter(event);
 
 function typeWriter() {
   if (i < txt.length) {
-    document.getElementById("type").innerHTML += txt.charAt(i);
+    document.getElementById('witter').innerHTML += txt.charAt(i);
     i++;
     setTimeout(typeWriter, speed);
   }
