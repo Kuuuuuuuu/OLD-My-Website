@@ -37,7 +37,7 @@ function stopwatch(){
                 }, 1000);
             }, 1000);
         }, 1000);
-    }, 0000);
+    }, 1000;
 }
 
 box.addEventListener('click',function(){
