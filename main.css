@@ -9,16 +9,11 @@
 }
 
 body {
-    background: url(bg2.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    
-    min-height: 100vh;
-    
-    display: flex;
-    flex-direction: column;
+   font-family: 'Poppins', sans-serif !important; 
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   text-rendering: optimizeLegibility;
+   background-color: #131b21;
 }
 
 #button {
