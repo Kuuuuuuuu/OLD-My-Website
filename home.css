@@ -428,6 +428,14 @@ ul.social-icons {
     text-align: center;
     padding: 75px 0px 75px 0px;
     align-content: center;
-    font-size: 20px;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.writer {
+    text-align: center;
+    padding: 75px 0px 75px 0px;
+    align-content: center;
+    font-size: 75px;
     color: #ffffff;
 }
