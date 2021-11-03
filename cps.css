@@ -1,0 +1,30 @@
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+}
+.box{
+    height: 300px;
+    width: 300px;
+    background-color: red;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.time{
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    display: inline-block;
+    border: 2px solid black;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.clicks{
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
