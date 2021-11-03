@@ -32,12 +32,12 @@ function stopwatch(){
                             clicks.innerHTML = "";
                             document.querySelector("h1").innerHTML = `Your click speed is ${click/5} CPS<br>${click} clicks in 5 seconds `;
                             clickElement.replaceWith(box);  
-                        }, 1000);
+                        }, 20);
                     }, 1000);
                 }, 1000);
             }, 1000);
         }, 1000);
-    }, 1000;
+    }, 0);
 }
 
 box.addEventListener('click',function(){
