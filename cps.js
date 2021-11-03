@@ -11,7 +11,8 @@ btn.style.display = "none";
 function loop() {
   setInterval(() => {
     if(sec !== 0) {
-       sec--;
+       let after = sec - 0.5;
+       sec = after;
     } else if(sec == 0) {
       time.innerHTML = "Time over";
       box.style.display = "none";
@@ -24,7 +25,7 @@ function loop() {
       click = 0;
       sec = 5;
      }
-   }, 900);
+   }, 400);
  }
 
  function stopwatch(){
