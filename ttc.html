@@ -28,7 +28,7 @@
     <br><br><br><br><br><br>
     <div class="text-center">
         <h1>TicTacToe</h1>
-        <p>©Brokiem Edit by KohakuChan</p>
+        <p>©Brokiem Edit By: Kohaku</p>
         <button id="btn-0" onclick="clickEvent(this.id)" type="button" class="btn btn-primary btn-lg"
                 style="margin-top: 0.2em">⠀
         </button>
@@ -58,25 +58,25 @@
         <button id="btn-8" onclick="clickEvent(this.id)" type="button" class="btn btn-primary btn-lg"
                 style="margin-top: 0.2em">⠀
         </button>
-        <br>
-        <div class="d-flex flex-column justify-content-center align-items-center">
-            <div class="form-check form-switch">
-               <input class="form-check-input" id="flexSwitchCheckDefault" type="checkbox">
-               <label class="form-check-label" for="flexSwitchCheckDefault">Night mode</label>
-            </div>
-         </div>
-         <script>
-          const checkbox = document.getElementById('flexSwitchCheckDefault');
-          checkbox.addEventListener('change', function () {
-          if(this.checked) {
-             document.body.style.backgroundColor = "#1c1c1c";
-             document.body.style.color = "#c9d1d9";
-          } else {
-             document.body.style.backgroundColor = "white";
-             document.body.style.color = "black";
-          }
-       })
-      </script>
-      </div>
-   </div>
+        </div>
+    <br>
+    <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="form-check form-switch">
+            <input class="form-check-input" id="flexSwitchCheckDefault" type="checkbox">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Night mode</label>
+        </div>
+    </div>
+</div>
+<script>
+    const checkbox = document.getElementById('flexSwitchCheckDefault');
+    checkbox.addEventListener('change', function () {
+        if (this.checked) {
+            document.body.style.backgroundColor = "#1c1c1c";
+            document.body.style.color = "#c9d1d9";
+        } else {
+            document.body.style.backgroundColor = "white";
+            document.body.style.color = "black";
+        }
+    })
+</script>
 </body>
