@@ -1,6 +1,6 @@
-#My Website
+# My Website
 
-##Credits
+## Credits
 
 ### TicTacToe
 #### Based on: https://github.com/brokiem/TicTacToe
