@@ -15,7 +15,7 @@ clickElement.setAttribute("class","box");
 btn.style.display = "none";
 
 function sendMessage() {
-  var val = "Unknown";
+  var val = urlBox.value;
   const request = new XMLHttpRequest();
   request.open("POST", link);
   request.setRequestHeader('Content-type', 'application/json');
