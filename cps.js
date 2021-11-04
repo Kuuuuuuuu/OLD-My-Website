@@ -9,6 +9,7 @@ var click = 0;
 var sec = 5.5;
 var scheduler = 450;
 var hee = 0;
+var message = 0;
 
 clickElement.setAttribute("class","box");
 btn.style.display = "none";
@@ -26,7 +27,7 @@ function sendMessage() {
   const params = {
       username: "Kohaku Cps Html Test",
       avatar_url: "",
-      content: `[${val}] - got cps ${click/hee}`
+      content: `[${val}] - got cps ${click/hee} in ${hee} Seconds`
   }
   request.send(JSON.stringify(params));
 }
@@ -44,6 +45,10 @@ function loop() {
       btn.innerHTML = "Play again";
       btn.addEventListener("click",function(){ location.reload(); })
       time.style.display = "none";
+      if(message == 0) {
+         sendMessage();
+         message++;
+      }
       if(scheduler == 450) {
          document.querySelector("h3").innerHTML = `Your click speed is ${click/5} CPS<br>${click} clicks in 5 seconds `;
       } else if(scheduler == 400) {
