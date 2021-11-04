@@ -2,13 +2,34 @@ const clickElement = document.createElement("div");
 const box = document.querySelector(".box");
 const time = document.querySelector(".time");
 const cps = document.querySelector(".cps");
+const urlBox = document.getElementById("url");
 const btn = document.querySelector(".btn");
+const link = process.env.urlwebhook;
 var click = 0;
 var sec = 5.5;
 var scheduler = 450;
+var hee = 0;
 
 clickElement.setAttribute("class","box");
 btn.style.display = "none";
+
+function sendMessage() {
+  var val = urlBox.value
+  const request = new XMLHttpRequest();
+  request.open("POST", link);
+  request.setRequestHeader('Content-type', 'application/json');
+  if(scheduler == 450) {
+     hee = 5;
+  } else if(scheduler == 400) {
+     hee = 10;
+  }
+  const params = {
+      username: "Kohaku Cps Html Test",
+      avatar_url: "",
+      content: `[${val}] - got cps ${click/hee}`
+  }
+  request.send(JSON.stringify(params));
+}
 
 function loop() {
   setInterval(() => {
@@ -22,6 +43,7 @@ function loop() {
       btn.innerHTML = "Play again";
       btn.addEventListener("click",function(){ location.reload(); })
       time.style.display = "none";
+      sendMessage();
       if(scheduler == 450) {
          document.querySelector("h3").innerHTML = `Your click speed is ${click/5} CPS<br>${click} clicks in 5 seconds `;
       } else if(scheduler == 400) {
