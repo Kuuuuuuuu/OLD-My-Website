@@ -99,7 +99,6 @@ function loop() {
 
  box.addEventListener('click',function(){
     stopwatch();
-    box.replaceWith(clickElement);
     btn.style.display = "none";
     clickElement.addEventListener('click',function(){ addClick(); })
 })
