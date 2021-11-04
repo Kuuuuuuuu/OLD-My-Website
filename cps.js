@@ -5,11 +5,11 @@ const cps = document.getElementById("cps");
 const urlBox = document.getElementById("url");
 const btn = document.querySelector(".btn");
 const link = "https://discord.com/api/webhooks/905833909110059098/-8unIQsHPRvH4Fzj_OK2lpOvifc1e1-Dgqs0YdgKB2tX6_wLkjhWCaPddOAjQlnGCXDK";
-var click = 0;
-var sec = 5.5;
-var scheduler = 450;
-var hee = 0;
-var message = 0;
+let click = 0;
+let sec = 5.5;
+let scheduler = 450;
+let hee = 0;
+let message = 0;
 
 clickElement.setAttribute("class","box");
 btn.style.display = "none";
@@ -79,6 +79,7 @@ function loop() {
  
  function addClick(){
    click++;
+   console.log(`Clicks: ${click}`);
    if(scheduler == 450) {
       document.querySelector("h3").innerHTML = `Your click speed is ${click/5} CPS<br>${click} Clicks`;
    } else if(scheduler == 400) {
