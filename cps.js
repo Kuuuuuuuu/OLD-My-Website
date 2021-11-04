@@ -23,14 +23,13 @@ function loop() {
       time.style.display = "none";
       document.querySelector("h1").innerHTML = `Your click speed is ${click/5} CPS<br>${click} clicks in 5 seconds `;
       clickElement.replaceWith(box);
-      click = 0;
      }
    }, 450);
  }
 
  function stopwatch(){
    loop();
-   if(sec == 5.5) {
+   if(sec == 5.5 || sec == 10.5) {
       click = 0;
    }
    setInterval(() => {
