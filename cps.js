@@ -36,7 +36,7 @@ function loop() {
    if(sec == 5.5) {
       scheduler = 450;
    } else if(sec == 10.5) {
-      scheduler = 370;
+      scheduler = 300;
    }
    setInterval(() => {
      time.innerHTML = `${sec} Seconds Left`;
@@ -49,12 +49,11 @@ function loop() {
  }
 
  cps.addEventListener('click',function(){
+   document.querySelector("h4").innerHTML = `Now set to ${sec} Seconds`;
    if(sec == 5.5) {
       sec = 10.5;
-      document.querySelector("h4").innerHTML = `Now set to 10 Seconds`;
-   } else {
+   } else if(sec == 10.5) {
       sec = 5.5;
-      document.querySelector("h4").innerHTML = `Now set to 5 seconds`;
    }
  })
 
