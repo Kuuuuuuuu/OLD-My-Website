@@ -25,7 +25,7 @@ function loop() {
       click = 0;
       sec = 5;
      }
-   }, 400);
+   }, 450);
  }
 
  function stopwatch(){
