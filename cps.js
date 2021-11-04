@@ -33,7 +33,6 @@ function sendMessage() {
 }
 
 function loop() {
-  sendMessage();
   setInterval(() => {
     if(sec !== 0) {
        let after = sec - 0.5;
