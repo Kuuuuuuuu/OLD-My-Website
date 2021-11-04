@@ -5,6 +5,7 @@ const cps = document.querySelector(".cps");
 const btn = document.querySelector(".btn");
 var click = 0;
 var sec = 5.5;
+var scheduler = 450;
 
 clickElement.setAttribute("class","box");
 btn.style.display = "none";
@@ -24,13 +25,18 @@ function loop() {
       document.querySelector("h3").innerHTML = `Your click speed is ${click/5} CPS<br>${click} clicks in 5 seconds `;
       clickElement.replaceWith(box);
      }
-   }, 450);
+   }, scheduler);
  }
 
  function stopwatch(){
    loop();
    if(sec == 5.5 || sec == 10.5) {
       click = 0;
+   }
+   if(sec == 5.5) {
+      scheduler = 450;
+   } else if(sec == 10.5) {
+      scheduler = 370;
    }
    setInterval(() => {
      time.innerHTML = `${sec} Seconds Left`;
