@@ -1,4 +1,4 @@
-const clickElement = document.createElement("div");
+const clickElement = document.createElement("button");
 const box = document.querySelector(".box");
 const time = document.querySelector(".time");
 const cps = document.getElementById("cps");
