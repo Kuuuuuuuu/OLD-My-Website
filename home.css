@@ -89,6 +89,7 @@ body {
    position: fixed;
    border-radius: 50%;
    border: 1px solid #ffffff59;
+
 }
 
 @keyframes ripple-effect {
@@ -96,4 +97,11 @@ body {
       transform:scale(15);
       opacity: 0.01;
    }
+}
+
+#normal {
+    text-align: center;
+    padding: 75px 0px 75px 0px;
+    align-content: center;
+    color: #ffffff;
 }
