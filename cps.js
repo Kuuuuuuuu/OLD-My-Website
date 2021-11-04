@@ -100,6 +100,6 @@ function loop() {
  box.addEventListener('click',function(){
     stopwatch();
     btn.style.display = "none";
-    clickElement.addEventListener('click',function(){ addClick(); })
+    addClick();
 })
-//Nah please not use this code it bug he
+//Gay now it working perfectly
