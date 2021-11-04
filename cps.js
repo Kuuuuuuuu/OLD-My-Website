@@ -63,8 +63,8 @@ function loop() {
  }
 
  function stopwatch(){
-   loop();
    if(sec == 5.5 || sec == 10.5) {
+      loop();
       click = 0;
    }
    if(sec == 5.5) {
