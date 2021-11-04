@@ -1,9 +1,10 @@
 const clickElement = document.createElement("div");
 const box = document.querySelector(".box");
 const time = document.querySelector(".time");
+const cps = document.querySelector(".cps");
 const btn = document.querySelector(".btn");
 var click = 0;
-var sec = 5;
+var sec = 5.5;
 
 clickElement.setAttribute("class","box");
 btn.style.display = "none";
@@ -23,13 +24,15 @@ function loop() {
       document.querySelector("h1").innerHTML = `Your click speed is ${click/5} CPS<br>${click} clicks in 5 seconds `;
       clickElement.replaceWith(box);
       click = 0;
-      sec = 5;
      }
    }, 450);
  }
 
  function stopwatch(){
    loop();
+   if(sec == 5.5) {
+      click = 0;
+   }
    setInterval(() => {
      time.innerHTML = `${sec} Seconds Left`;
    }, 1);
@@ -39,6 +42,15 @@ function loop() {
    click++;
    document.querySelector("h1").innerHTML = `Your click speed is ${click/5} CPS<br>${click} Clicks`;
  }
+
+ cps.addEventListener('click',function(){
+   if(sec == 5.5) {
+      sec = 10.5;
+      document.querySelector("h2").innerHTML = `Now set to 10 Seconds`;
+   } else {
+      sec = 5.5;
+      document.querySelector("h2").innerHTML = `Now set to 5 seconds`;
+ })
 
  box.addEventListener('click',function(){
     stopwatch();
