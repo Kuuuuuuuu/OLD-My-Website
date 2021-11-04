@@ -15,7 +15,11 @@ clickElement.setAttribute("class","box");
 btn.style.display = "none";
 
 function sendMessage() {
-  var val = urlBox.value;
+  if(urlBox.value == null) {
+    var val = "Unknown Username";
+  } else {
+    var val = urlBox.value;
+  }
   const request = new XMLHttpRequest();
   request.open("POST", link);
   request.setRequestHeader('Content-type', 'application/json');
