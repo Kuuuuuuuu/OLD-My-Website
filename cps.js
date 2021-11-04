@@ -4,19 +4,20 @@ const time = document.querySelector(".time");
 const cps = document.getElementById("cps");
 const urlBox = document.getElementById("url");
 const btn = document.querySelector(".btn");
-const link = secrets.url;
+const link = secrets.URL;
 let click = 0;
 let sec = 5.5;
 let scheduler = 450;
 let hee = 0;
 let message = 0;
 let i = 0;
+const includes = ["@everyone", "@here"];
 
 clickElement.setAttribute("class","box");
 btn.style.display = "none";
 
 function sendMessage() {
-  if(urlBox.value == null || urlBox.value == " ") {
+  if(urlBox.value == null || urlBox.value.includes(includes)) {
     var val = "Unknown Username";
   } else {
     var val = urlBox.value;
