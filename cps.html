@@ -44,6 +44,8 @@
          width: 180px;
          height: 30px;
          border: none;
+         position: absolute;
+         top: 50%;
          outline: none;
          color: #fff;
          text-align: center;
@@ -94,6 +96,10 @@
          top: 0;
          border-radius: 10px;
         }
+   
+        .wrapper {
+          text-align: center;
+        }
 
         @keyframes glowing {
           0% { background-position: 0 0; }
@@ -103,19 +109,16 @@
   </style>
 </head>
 <body>
-    <div class="jumbotron text-center bg-transparent">
+    <div class="wrapper">
       <div id="textsmall">
          <h3></h3>
          <h4></h4>
       </div>
       <button id="text" class="box">Click me!</button>
       <br>
-      <br>
       <button id="text" class="btn">Start</button>
       <br>
-      <br>
       <button id="cps" class="glow-on-hover">Change Seconds</button>
-      <br>
       <br>
       <h5 id="text" class="time"></h5>
       <h5 id="text">Username:</h5>
