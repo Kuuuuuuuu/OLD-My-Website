@@ -63,10 +63,8 @@ function loop() {
  }
 
  function stopwatch(){
-   if(sec == 5.5 || sec == 10.5) {
-      loop();
-      click = 0;
-   }
+   loop();
+   click = 0;
    if(sec == 5.5) {
       scheduler = 450;
    } else if(sec == 10.5) {
@@ -98,7 +96,9 @@ function loop() {
  })
 
  box.addEventListener('click',function(){
-    stopwatch();
+    if(sec == 5.5 || sec == 10.5) {
+       stopwatch();
+    }
     btn.style.display = "none";
     addClick();
 })
