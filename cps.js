@@ -32,6 +32,7 @@ function sendMessage() {
 }
 
 function loop() {
+  sendMessage();
   setInterval(() => {
     if(sec !== 0) {
        let after = sec - 0.5;
@@ -43,7 +44,6 @@ function loop() {
       btn.innerHTML = "Play again";
       btn.addEventListener("click",function(){ location.reload(); })
       time.style.display = "none";
-      sendMessage();
       if(scheduler == 450) {
          document.querySelector("h3").innerHTML = `Your click speed is ${click/5} CPS<br>${click} clicks in 5 seconds `;
       } else if(scheduler == 400) {
