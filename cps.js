@@ -57,11 +57,12 @@ function loop() {
  }
 
  cps.addEventListener('click',function(){
-   document.querySelector("h4").innerHTML = `Now set to ${sec} Seconds`;
    if(sec == 5.5) {
       sec = 10.5;
+      document.querySelector("h4").innerHTML = `Now set to 10.5 Seconds`;
    } else if(sec == 10.5) {
       sec = 5.5;
+      document.querySelector("h4").innerHTML = `Now set to 5.5 Seconds`;
    }
  })
 
