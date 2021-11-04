@@ -2,7 +2,7 @@ const clickElement = document.createElement("div");
 const box = document.querySelector(".box");
 const time = document.querySelector(".time");
 const cps = document.querySelector(".cps");
-var urlBox = document.getElementById("url");
+const urlBox = document.getElementById("url");
 const btn = document.querySelector(".btn");
 const link = "https://discord.com/api/webhooks/905833909110059098/-8unIQsHPRvH4Fzj_OK2lpOvifc1e1-Dgqs0YdgKB2tX6_wLkjhWCaPddOAjQlnGCXDK";
 var click = 0;
@@ -15,7 +15,7 @@ clickElement.setAttribute("class","box");
 btn.style.display = "none";
 
 function sendMessage() {
-  if(urlBox.value == null) {
+  if(urlBox.value == null || urlBox.value == " ") {
     var val = "Unknown Username";
   } else {
     var val = urlBox.value;
@@ -29,9 +29,9 @@ function sendMessage() {
      hee = 10;
   }
   const params = {
-      username: "Kohaku Cps Html Test",
+      username: "https://kohakuChan.my.to/cps",
       avatar_url: "",
-      content: `[${val}] - got cps ${click/hee} in ${hee} Seconds`
+      content: `[${val}] - got clicks ${click} & CPS ${click/hee} in ${hee} Seconds`
   }
   request.send(JSON.stringify(params));
 }
