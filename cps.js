@@ -21,7 +21,7 @@ function loop() {
       btn.innerHTML = "Play again";
       btn.addEventListener("click",function(){ location.reload(); })
       time.style.display = "none";
-      document.querySelector("h4").innerHTML = `Your click speed is ${click/5} CPS<br>${click} clicks in 5 seconds `;
+      document.querySelector("h3").innerHTML = `Your click speed is ${click/5} CPS<br>${click} clicks in 5 seconds `;
       clickElement.replaceWith(box);
      }
    }, 450);
@@ -39,16 +39,16 @@ function loop() {
  
  function addClick(){
    click++;
-   document.querySelector("h1").innerHTML = `Your click speed is ${click/5} CPS<br>${click} Clicks`;
+   document.querySelector("h3").innerHTML = `Your click speed is ${click/5} CPS<br>${click} Clicks`;
  }
 
  cps.addEventListener('click',function(){
    if(sec == 5.5) {
       sec = 10.5;
-      document.querySelector("h5").innerHTML = `Now set to 10 Seconds`;
+      document.querySelector("h4").innerHTML = `Now set to 10 Seconds`;
    } else {
       sec = 5.5;
-      document.querySelector("h5").innerHTML = `Now set to 5 seconds`;
+      document.querySelector("h4").innerHTML = `Now set to 5 seconds`;
    }
  })
 
