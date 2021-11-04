@@ -50,6 +50,7 @@ function loop() {
    } else {
       sec = 5.5;
       document.querySelector("h2").innerHTML = `Now set to 5 seconds`;
+   }
  })
 
  box.addEventListener('click',function(){
