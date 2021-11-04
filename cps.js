@@ -10,6 +10,7 @@ let sec = 5.5;
 let scheduler = 450;
 let hee = 0;
 let message = 0;
+let i = 0;
 
 clickElement.setAttribute("class","box");
 btn.style.display = "none";
@@ -63,7 +64,6 @@ function loop() {
  }
 
  function stopwatch(){
-   var i = 0;
    if(sec == 5.5) {
       scheduler = 450;
    } else if(sec == 10.5) {
@@ -72,6 +72,7 @@ function loop() {
    if(i == 0) {
       loop();
       click = 0;
+      i++;
    }
    setInterval(() => {
      time.innerHTML = `${sec} Seconds Left`;
@@ -101,8 +102,9 @@ function loop() {
  box.addEventListener('click',function(){
     if(sec == 5.5 || sec == 10.5) {
        stopwatch();
+    } else if(sec !== 0) {
+       btn.style.display = "none";
+       addClick();
     }
-    btn.style.display = "none";
-    addClick();
 })
 //Gay now it working perfectly
