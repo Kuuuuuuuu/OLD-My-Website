@@ -26,7 +26,8 @@ function sendMessage() {
   request.setRequestHeader('Content-type', 'application/json');
   if(scheduler == 450) {
      hee = 5;
-  } else if(scheduler == 400) {
+  }
+  if(scheduler == 400) {
      hee = 10;
   }
   const params = {
@@ -42,7 +43,8 @@ function loop() {
     if(sec !== 0) {
        let after = sec - 0.5;
        sec = after;
-    } else if(sec == 0) {
+    }
+    if(sec == 0) {
       time.innerHTML = "Time over";
       box.style.display = "none";
       btn.style.display = "inline-block";
@@ -55,7 +57,8 @@ function loop() {
       }
       if(scheduler == 450) {
          document.querySelector("h3").innerHTML = `Your click speed is ${click/5} CPS<br>${click} clicks in 5 seconds `;
-      } else if(scheduler == 400) {
+      }
+      if(scheduler == 400) {
          document.querySelector("h3").innerHTML = `Your click speed is ${click/10} CPS<br>${click} clicks in 10 seconds `;
       }
       clickElement.replaceWith(box);
@@ -66,7 +69,8 @@ function loop() {
  function stopwatch(){
    if(sec == 5.5) {
       scheduler = 450;
-   } else if(sec == 10.5) {
+   }
+   if(sec == 10.5) {
       scheduler = 400;
    }
    if(i == 0) {
@@ -84,7 +88,8 @@ function loop() {
    console.log(`Clicks: ${click}`);
    if(scheduler == 450) {
       document.querySelector("h3").innerHTML = `Your click speed is ${click/5} CPS<br>${click} Clicks`;
-   } else if(scheduler == 400) {
+   }
+   if(scheduler == 400) {
       document.querySelector("h3").innerHTML = `Your click speed is ${click/10} CPS<br>${click} Clicks`;
    }
  }
@@ -94,7 +99,8 @@ function loop() {
       if(sec == 5.5) {
          sec = 10.5;
          document.querySelector("h4").innerHTML = `Now set to 10.5 Seconds`;
-      } else if(sec == 10.5) {
+      }
+      if(sec == 10.5) {
          sec = 5.5;
          document.querySelector("h4").innerHTML = `Now set to 5.5 Seconds`;
       }
@@ -104,7 +110,8 @@ function loop() {
  box.addEventListener('click',function(){
     if(sec == 5.5 || sec == 10.5) {
        stopwatch();
-    } else if(sec !== 0) {
+    }
+    if(sec !== 0) {
        btn.style.display = "none";
        addClick();
     }
