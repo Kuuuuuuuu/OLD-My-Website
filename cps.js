@@ -63,12 +63,15 @@ function loop() {
  }
 
  function stopwatch(){
-   loop();
-   click = 0;
+   var i = 0;
    if(sec == 5.5) {
       scheduler = 450;
    } else if(sec == 10.5) {
       scheduler = 400;
+   }
+   if(i == 0) {
+      loop();
+      click = 0;
    }
    setInterval(() => {
      time.innerHTML = `${sec} Seconds Left`;
