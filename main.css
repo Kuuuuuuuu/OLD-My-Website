@@ -16,6 +16,7 @@ body {
    background-color: #131b21;
 }
 
+/*noinspection ALL*/
 #preloader {
   position: fixed;
   top: 0;

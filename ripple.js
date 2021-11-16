@@ -1,3 +1,5 @@
+// noinspection JSDeprecatedSymbols
+
 document.onclick = () => applyCursorRippleEffect(event);
 
 function applyCursorRippleEffect(e) {
@@ -17,6 +19,6 @@ function applyCursorRippleEffect(e) {
 }
 
 const all = document.body.getElementsByTagName("*");
-for (var i = 0;  i < all.length; ++i) {
+for (let i = 0;  i < all.length; ++i) {
   all[i].onclick = (event) => event.stopPropagation();
 }
