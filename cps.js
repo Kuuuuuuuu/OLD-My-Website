@@ -49,7 +49,7 @@ function loop() {
             box.style.display = "none";
             btn.style.display = "inline-block";
             btn.innerHTML = "Play again";
-            btn.addEventListener("click", function () {
+            btn.addEventListener("click", function() {
                 location.reload();
             })
             time.style.display = "none";
@@ -94,7 +94,7 @@ function addClick() {
     }
 }
 
-cps.addEventListener('click', function () {
+cps.addEventListener('click', function() {
     console.log(i);
     if (i === 0) {
         if (sec === 5.5) {
@@ -107,12 +107,12 @@ cps.addEventListener('click', function () {
     }
 })
 
-box.addEventListener('click', function () {
-    if (sec === 5.5 || sec === 10.5) {
-        stopwatch();
-    } else {
-        btn.style.display = "none";
-        addClick();
-    }
-})
-//Gay now it's working perfectly
+box.addEventListener('click', function() {
+        if (sec === 5.5 || sec === 10.5) {
+            stopwatch();
+        } else {
+            btn.style.display = "none";
+            addClick();
+        }
+    })
+    //Gay now it's working perfectly

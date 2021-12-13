@@ -1,6 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
-
 body {
     font-family: 'JetBrains Mono';
     -webkit-font-smoothing: antialiased;
@@ -27,7 +25,7 @@ body {
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
     position: absolute;
     top: -2px;
-    left:-2px;
+    left: -2px;
     background-size: 400%;
     z-index: -1;
     filter: blur(5px);
@@ -64,9 +62,15 @@ body {
 }
 
 @keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
 }
 
 #text {
@@ -84,20 +88,19 @@ body {
 }
 
 .ripple {
-   width: 10px;
-   height: 10px;
-   background-color: transparent;
-   position: fixed;
-   border-radius: 50%;
-   border: 1px solid #ffffff59;
-
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    position: fixed;
+    border-radius: 50%;
+    border: 1px solid #ffffff59;
 }
 
 @keyframes ripple-effect {
-   to {
-      transform:scale(15);
-      opacity: 0.01;
-   }
+    to {
+        transform: scale(15);
+        opacity: 0.01;
+    }
 }
 
 #normal {

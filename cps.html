@@ -1,133 +1,144 @@
 <!--suppress ALL -->
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-     @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
-
-     body {
-      font-family: 'JetBrains Mono';
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-rendering: optimizeLegibility;
-      background-color: #131b21;
-     }
-
-     #text {
-       text-align: center;
-       align-content: center;
-       color: #ffffff;
-     }
-
-     #textsmall {
-       text-align: center;
-       align-content: center;
-       color: #ffffff;
-       font-size: 20px;
-     }
-
-     h3, h4{
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      user-select: none;
-      text-align: center;
-      align-content: center;
-      color: #ffffff;
-     }
-
-      .time{
-        font-size: 25px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      }
-
-       .glow-on-hover, .btn, .box {
-         width: 180px;
-         height: 30px;
-         border: none;
-         position: absolute;
-         top: 50%;
-         outline: none;
-         color: #fff;
-         text-align: center;
-         background: rgb(0, 150, 255);
-         cursor: pointer;
-         position: relative;
-         z-index: 0;
-         border-radius: 10px;
-       }
-
-       .glow-on-hover:before {
-         content: '';
-         background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-         position: absolute;
-         top: -2px;
-         left:-2px;
-         background-size: 400%;
-         z-index: -1;
-         filter: blur(5px);
-         width: calc(100% + 4px);
-         height: calc(100% + 4px);
-         animation: glowing 20s linear infinite;
-         opacity: 0;
-         transition: opacity .3s ease-in-out;
-         border-radius: 10px;
-       }
-
-       .glow-on-hover:active {
-         color: rgb(0, 150, 255);
-       }
-
-       .glow-on-hover:active:after {
-         background: transparent;
-       }
-
-       .glow-on-hover:hover:before {
-         opacity: 1;
-       }
-
-       .glow-on-hover:after {
-         z-index: -1;
-         content: '';
-         position: absolute;
-         width: 100%;
-         height: 100%;
-         background: rgb(0, 150, 255);
-         left: 0;
-         top: 0;
-         border-radius: 10px;
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
+        body {
+            font-family: 'JetBrains Mono';
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            background-color: #131b21;
         }
-   
+        
+        #text {
+            text-align: center;
+            align-content: center;
+            color: #ffffff;
+        }
+        
+        #textsmall {
+            text-align: center;
+            align-content: center;
+            color: #ffffff;
+            font-size: 20px;
+        }
+        
+        h3,
+        h4 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            user-select: none;
+            text-align: center;
+            align-content: center;
+            color: #ffffff;
+        }
+        
+        .time {
+            font-size: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .glow-on-hover,
+        .btn,
+        .box {
+            width: 180px;
+            height: 30px;
+            border: none;
+            position: absolute;
+            top: 50%;
+            outline: none;
+            color: #fff;
+            text-align: center;
+            background: rgb(0, 150, 255);
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+        }
+        
+        .glow-on-hover:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+        
+        .glow-on-hover:active {
+            color: rgb(0, 150, 255);
+        }
+        
+        .glow-on-hover:active:after {
+            background: transparent;
+        }
+        
+        .glow-on-hover:hover:before {
+            opacity: 1;
+        }
+        
+        .glow-on-hover:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgb(0, 150, 255);
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+        
         .wrapper {
-          text-align: center;
+            text-align: center;
         }
-
+        
         @keyframes glowing {
-          0% { background-position: 0 0; }
-          50% { background-position: 400% 0; }
-          100% { background-position: 0 0; }
+            0% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 400% 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
         }
-  </style>
+    </style>
 </head>
+
 <body>
     <div class="wrapper">
-      <div id="textsmall">
-         <h3></h3>
-         <h4></h4>
-      </div>
-      <button id="text" class="box" style="width: 300px; height: 300px;">Click me!</button>
-      <br>
-      <button id="text" class="btn">Start</button>
-      <br>
-      <button id="cps" class="glow-on-hover">Change Seconds</button>
-      <br>
-      <h5 id="text" class="time"></h5>
-      <h5 id="text">Username:</h5>
-      <input type="url" id="url" style="width: 20em;"/>
-      <script src="cps.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-     </div>
-  </body>
+        <div id="textsmall">
+            <h3></h3>
+            <h4></h4>
+        </div>
+        <button id="text" class="box" style="width: 300px; height: 300px;">Click me!</button>
+        <br>
+        <button id="text" class="btn">Start</button>
+        <br>
+        <button id="cps" class="glow-on-hover">Change Seconds</button>
+        <br>
+        <h5 id="text" class="time"></h5>
+        <h5 id="text">Username:</h5>
+        <input type="url" id="url" style="width: 20em;" />
+        <script src="cps.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </div>
+</body>
+
 </html>
