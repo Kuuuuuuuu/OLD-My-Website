@@ -1,5 +1,3 @@
-// noinspection JSDeprecatedSymbols
-
 document.onclick = () => applyCursorRippleEffect(event);
 
 function applyCursorRippleEffect(e) {
