@@ -29,10 +29,12 @@ function typeWriter() {
             setTimeout(typeWriter, 95);
         }
     } catch (e) { // bypass hehe genius
-        console.log(e);
-        document.getElementById('hmm').innerHTML += txts.charAt(Typewriter);
-        Typewriter++;
-        setTimeout(typeWriter, 95);
+        if (Typewriter !== txts.length) {
+            console.log(e);
+            document.getElementById('hmm').innerHTML += txts.charAt(Typewriter);
+            Typewriter++;
+            setTimeout(typeWriter, 95);
+        }
     }
 }
 
@@ -51,6 +53,5 @@ function checkTime(i) {
     if (i < 10) {
         i = "0" + i
     }
-    ;
     return i;
 }
