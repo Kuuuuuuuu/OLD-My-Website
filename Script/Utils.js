@@ -24,9 +24,10 @@ for (let i = 0; i < all.length; ++i) {
 
 function typeWriter() {
     if (Typewriter !== txt.length) {
-        document.getElementById('writer').innerHTML += txt.charAt(i);
+        document.getElementById('writer').innerHTML += txt.charAt(Typewriter);
         Typewriter++;
         setTimeout(typeWriter, 95);
+        return;
     }
 }
 
