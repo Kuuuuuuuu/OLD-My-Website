@@ -1,3 +1,7 @@
+let i = 0;
+const txt = 'KohakuChan';
+let bruh = true;
+
 document.onclick = () => applyCursorRippleEffect(event);
 
 function applyCursorRippleEffect(e) {
@@ -14,9 +18,6 @@ function applyCursorRippleEffect(e) {
     }
 }
 
-let i = 0;
-const txt = 'KohakuChan';
-
 const all = document.body.getElementsByTagName("*");
 for (let i = 0; i < all.length; ++i) {
     all[i].onclick = (event) => event.stopPropagation();
@@ -27,11 +28,11 @@ function typeWriter() {
         document.getElementById('writer').innerHTML += txt.charAt(i);
         i++;
         setTimeout(typeWriter, 150);
-    } else if (i == txt.length) {
+    } else if (i >= 1 && bruh == true) {
         bruh = false;
         i--;
         setTimeout(typeWriter, 150);
-    } else if (i == 0) {
+    } else if (i == 0 && bruh == false) {
         bruh = true;
         i++;
         setTimeout(typeWriter, 150);
