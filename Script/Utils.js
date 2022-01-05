@@ -13,6 +13,8 @@ function applyCursorRippleEffect(e) {
         document.body.removeChild(ripple);
     }
 }
+let i = 0;
+const txt = 'KohakuChan';
 
 const all = document.body.getElementsByTagName("*");
 for (let i = 0; i < all.length; ++i) {
@@ -20,8 +22,6 @@ for (let i = 0; i < all.length; ++i) {
 }
 
 function typeWriter() {
-    let i = 0;
-    const txt = 'KohakuChan';
     if (i < txt.length) {
         document.getElementById('writer').innerHTML += txt.charAt(i);
         i++;
