@@ -28,7 +28,7 @@ function sendMessage() {
     request.setRequestHeader('Content-type', 'application/json');
     if (scheduler == 450) {
         hee = 5;
-    } else {
+    } else if (scheduler == 400) {
         hee = 10;
     }
     const params = {
@@ -60,7 +60,7 @@ function loop() {
             i = 0;
             if (scheduler == 450) {
                 document.querySelector("h3").innerHTML = `Your click speed is ${click / 5} CPS<br>${click} clicks in 5 seconds `;
-            } else {
+            } else if (scheduler == 400) {
                 document.querySelector("h3").innerHTML = `Your click speed is ${click / 10} CPS<br>${click} clicks in 10 seconds `;
             }
             clickElement.replaceWith(box);
@@ -74,7 +74,7 @@ function stopwatch() {
     } else {
         scheduler = 400;
     }
-    if (i === 0) {
+    if (i == 0) {
         loop();
         click = 0;
         i++;
@@ -89,7 +89,7 @@ function addClick() {
     console.log(`Clicks: ${click}`);
     if (scheduler == 450) {
         document.querySelector("h3").innerHTML = `Your click speed is ${click / 5} CPS<br>${click} Clicks`;
-    } else {
+    } else if (scheduler == 400) {
         document.querySelector("h3").innerHTML = `Your click speed is ${click / 10} CPS<br>${click} Clicks`;
     }
 }
@@ -110,7 +110,7 @@ cps.addEventListener('click', function () {
 box.addEventListener('click', function () {
     if (sec == 5.5 || sec == 10.5) {
         stopwatch();
-    } else {
+    } else if (sec > 0) {
         btn.style.display = "none";
         addClick();
     }
