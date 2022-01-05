@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
+
         body {
             font-family: 'JetBrains Mono';
             -webkit-font-smoothing: antialiased;
@@ -14,20 +15,20 @@
             text-rendering: optimizeLegibility;
             background-color: #131b21;
         }
-        
+
         #text {
             text-align: center;
             align-content: center;
             color: #ffffff;
         }
-        
+
         #textsmall {
             text-align: center;
             align-content: center;
             color: #ffffff;
             font-size: 20px;
         }
-        
+
         h3,
         h4 {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -36,12 +37,12 @@
             align-content: center;
             color: #ffffff;
         }
-        
+
         .time {
             font-size: 25px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         .glow-on-hover,
         .btn,
         .box {
@@ -59,7 +60,7 @@
             z-index: 0;
             border-radius: 10px;
         }
-        
+
         .glow-on-hover:before {
             content: '';
             background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
@@ -76,19 +77,19 @@
             transition: opacity .3s ease-in-out;
             border-radius: 10px;
         }
-        
+
         .glow-on-hover:active {
             color: rgb(0, 150, 255);
         }
-        
+
         .glow-on-hover:active:after {
             background: transparent;
         }
-        
+
         .glow-on-hover:hover:before {
             opacity: 1;
         }
-        
+
         .glow-on-hover:after {
             z-index: -1;
             content: '';
@@ -100,11 +101,11 @@
             top: 0;
             border-radius: 10px;
         }
-        
+
         .wrapper {
             text-align: center;
         }
-        
+
         @keyframes glowing {
             0% {
                 background-position: 0 0;
@@ -120,25 +121,27 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <div id="textsmall">
-            <h3></h3>
-            <h4></h4>
-        </div>
-        <button id="text" class="box" style="width: 300px; height: 300px;">Click me!</button>
-        <br>
-        <button id="text" class="btn">Start</button>
-        <br>
-        <button id="cps" class="glow-on-hover">Change Seconds</button>
-        <br>
-        <h5 id="text" class="time"></h5>
-        <h5 id="text">Username:</h5>
-        <input type="url" id="url" style="width: 20em;" />
-        <script src="Script/cps.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<div class="wrapper">
+    <div id="textsmall">
+        <h3></h3>
+        <h4></h4>
     </div>
+    <button class="box" id="text" style="width: 300px; height: 300px;">Click me!</button>
+    <br>
+    <button class="btn" id="text">Start</button>
+    <br>
+    <button class="glow-on-hover" id="cps">Change Seconds</button>
+    <br>
+    <h5 class="time" id="text"></h5>
+    <h5 id="text">Username:</h5>
+    <input id="url" style="width: 20em;" type="url"/>
+    <script src="Script/cps.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</div>
 </body>
 
 </html>
