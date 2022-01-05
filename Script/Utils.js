@@ -25,10 +25,10 @@ function typeWriter() {
     if (i < txt.length) {
         document.getElementById('writer').innerHTML += txt.charAt(i);
         i++;
-        setTimeout(typeWriter, 250).ref();
+        setTimeout(typeWriter, 250);
     } else {
         i--;
-        setTimeout(typeWriter, 250).ref();
+        setTimeout(typeWriter, 250);
     }
 }
 
