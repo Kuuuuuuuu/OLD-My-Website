@@ -24,21 +24,16 @@ for (let i = 0; i < all.length; ++i) {
 }
 
 function typeWriter() {
-    setInterval(() => {
-        if (i < txt.length && bruh == true) {
-            document.getElementById('writer').innerHTML += txt.charAt(i);
-            i++;
-            setTimeout(typeWriter, 150);
-        } else if (i >= 1 && bruh == true) {
-            bruh = false;
-            i--;
-            setTimeout(typeWriter, 150);
-        } else if (i == 0 && bruh == false) {
-            bruh = true;
-            i++;
-            setTimeout(typeWriter, 150);
-        }
-    }, 100);
+    if (i !== txt.length && bruh == true) {
+        document.getElementById('writer').innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, 150);
+    }
+    if (i > 1 && bruh == true) {
+        bruh = false;
+        i--;
+        setTimeout(typeWriter, 150);
+    }
 }
 
 function startTime() {
