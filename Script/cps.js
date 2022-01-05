@@ -115,4 +115,4 @@ box.addEventListener('click', function () {
         addClick();
     }
 })
-    //Gay now it's working perfectly
+//Gay now it's working perfectly
