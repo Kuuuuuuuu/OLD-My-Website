@@ -13,6 +13,7 @@ function applyCursorRippleEffect(e) {
         document.body.removeChild(ripple);
     }
 }
+
 let i = 0;
 const txt = 'KohakuChan';
 
@@ -22,13 +23,18 @@ for (let i = 0; i < all.length; ++i) {
 }
 
 function typeWriter() {
-    if (i < txt.length) {
+    if (i < txt.length && bruh == true) {
         document.getElementById('writer').innerHTML += txt.charAt(i);
         i++;
-        setTimeout(typeWriter, 250);
-    } else {
+        setTimeout(typeWriter, 150);
+    } else if (i == txt.length) {
+        bruh = false;
         i--;
-        setTimeout(typeWriter, 250);
+        setTimeout(typeWriter, 150);
+    } else if (i == 0) {
+        bruh = true;
+        i++;
+        setTimeout(typeWriter, 150);
     }
 }
 
