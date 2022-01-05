@@ -22,12 +22,14 @@ for (let i = 0; i < all.length; ++i) {
 }
 
 function typeWriter() {
-    if (Typewriter !== txt.length) {
-        document.getElementById('writer').innerHTML += txt.charAt(Typewriter);
-        Typewriter++;
-        setTimeout(typeWriter, 95);
-    }
-    if (Typewriter !== txts.length) {
+    try {
+        if (Typewriter !== txt.length) {
+            document.getElementById('writer').innerHTML += txt.charAt(Typewriter);
+            Typewriter++;
+            setTimeout(typeWriter, 95);
+        }
+    } catch (e) { // bypass hehe genius
+        console.log(e);
         document.getElementById('hmm').innerHTML += txts.charAt(Typewriter);
         Typewriter++;
         setTimeout(typeWriter, 95);
