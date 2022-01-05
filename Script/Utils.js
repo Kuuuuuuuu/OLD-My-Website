@@ -1,6 +1,6 @@
 let Typewriter = 0;
 const txt = 'KohakuChan';
-const txts = 'Social Info';
+const txts = 'Social-Info';
 document.onclick = () => applyCursorRippleEffect(event);
 
 function applyCursorRippleEffect(e) {
