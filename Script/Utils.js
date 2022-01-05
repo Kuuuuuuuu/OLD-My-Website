@@ -1,5 +1,6 @@
 let Typewriter = 0;
 const txt = 'KohakuChan';
+const txts = 'Social Account';
 
 document.onclick = () => applyCursorRippleEffect(event);
 
@@ -25,6 +26,12 @@ for (let i = 0; i < all.length; ++i) {
 function typeWriter() {
     if (Typewriter !== txt.length) {
         document.getElementById('writer').innerHTML += txt.charAt(Typewriter);
+        Typewriter++;
+        setTimeout(typeWriter, 95);
+        return;
+    }
+    if (Typewriter !== txts.length) {
+        document.getElementById('hmm').innerHTML += txts.charAt(Typewriter);
         Typewriter++;
         setTimeout(typeWriter, 95);
         return;
