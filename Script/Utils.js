@@ -29,8 +29,10 @@ function typeWriter() {
         i++;
         setTimeout(typeWriter, 150);
     }
-    if (i > 1 && bruh == true) {
+    let word = document.getElementById('writer').innerHTML;
+    if (word == 'K' && bruh == true) {
         bruh = false;
+        document.getElementById('writer').innerHTML += txt.charAt(i);
         i--;
         setTimeout(typeWriter, 150);
     }
