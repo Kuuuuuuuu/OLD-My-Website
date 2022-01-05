@@ -1,6 +1,6 @@
 let Typewriter = 0;
 const txt = 'KohakuChan';
-const txts = 'Social-Info';
+const txts = 'Social';
 document.onclick = () => applyCursorRippleEffect(event);
 
 function applyCursorRippleEffect(e) {
@@ -28,8 +28,7 @@ function typeWriter() {
             setTimeout(typeWriter, 95);
         }
     } catch (e) { // bypass hehe genius
-        if (Typewriter < txts.length+1) {
-            console.log(e);
+        if (Typewriter < txts.length) {
             document.getElementById('hmm').innerHTML += txts.charAt(Typewriter);
             Typewriter++;
             setTimeout(typeWriter, 95);
