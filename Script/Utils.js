@@ -22,13 +22,13 @@ for (let i = 0; i < all.length; ++i) {
 
 function typeWriter() {
     try {
-        if (Typewriter !== txt.length) {
+        if (Typewriter < txt.length) {
             document.getElementById('writer').innerHTML += txt.charAt(Typewriter);
             Typewriter++;
             setTimeout(typeWriter, 95);
         }
     } catch (e) { // bypass hehe genius
-        if (Typewriter !== txts.length) {
+        if (Typewriter < txts.length) {
             console.log(e);
             document.getElementById('hmm').innerHTML += txts.charAt(Typewriter);
             Typewriter++;
