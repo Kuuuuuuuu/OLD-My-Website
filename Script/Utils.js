@@ -1,7 +1,3 @@
-let i = 0;
-const txt = 'KohakuChan';
-const speed = 100;
-
 document.onclick = () => applyCursorRippleEffect(event);
 
 function applyCursorRippleEffect(e) {
@@ -24,13 +20,15 @@ for (let i = 0; i < all.length; ++i) {
 }
 
 function typeWriter() {
+    let i = 0;
+    const txt = 'KohakuChan';
     if (i < txt.length) {
         document.getElementById('writer').innerHTML += txt.charAt(i);
         i++;
-        setTimeout(typeWriter, speed);
+        setTimeout(typeWriter, 250).ref();
     } else {
         i--;
-        setTimeout(typeWriter, speed);
+        setTimeout(typeWriter, 250).ref();
     }
 }
 
