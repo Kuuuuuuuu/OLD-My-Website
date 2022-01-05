@@ -26,7 +26,7 @@ function sendMessage() {
     const request = new XMLHttpRequest();
     request.open("POST", link);
     request.setRequestHeader('Content-type', 'application/json');
-    if (scheduler === 450) {
+    if (scheduler == 450) {
         hee = 5;
     } else {
         hee = 10;
@@ -44,7 +44,7 @@ function loop() {
         if (sec !== 0) {
             sec = sec - 0.5;
         }
-        if (sec === 0) {
+        if (sec == 0) {
             time.innerHTML = "Time over";
             box.style.display = "none";
             btn.style.display = "inline-block";
@@ -53,12 +53,12 @@ function loop() {
                 location.reload();
             })
             time.style.display = "none";
-            if (message === 0) {
+            if (message == 0) {
                 sendMessage();
                 message++;
             }
             i = 0;
-            if (scheduler === 450) {
+            if (scheduler == 450) {
                 document.querySelector("h3").innerHTML = `Your click speed is ${click / 5} CPS<br>${click} clicks in 5 seconds `;
             } else {
                 document.querySelector("h3").innerHTML = `Your click speed is ${click / 10} CPS<br>${click} clicks in 10 seconds `;
@@ -69,7 +69,7 @@ function loop() {
 }
 
 function stopwatch() {
-    if (sec === 5.5) {
+    if (sec == 5.5) {
         scheduler = 450;
     } else {
         scheduler = 400;
@@ -87,7 +87,7 @@ function stopwatch() {
 function addClick() {
     click++;
     console.log(`Clicks: ${click}`);
-    if (scheduler === 450) {
+    if (scheduler == 450) {
         document.querySelector("h3").innerHTML = `Your click speed is ${click / 5} CPS<br>${click} Clicks`;
     } else {
         document.querySelector("h3").innerHTML = `Your click speed is ${click / 10} CPS<br>${click} Clicks`;
@@ -96,8 +96,8 @@ function addClick() {
 
 cps.addEventListener('click', function () {
     console.log(i);
-    if (i === 0) {
-        if (sec === 5.5) {
+    if (i == 0) {
+        if (sec == 5.5) {
             sec = 10.5;
             document.querySelector("h4").innerHTML = `Now set to 10.5 Seconds`;
         } else {
@@ -108,7 +108,7 @@ cps.addEventListener('click', function () {
 })
 
 box.addEventListener('click', function () {
-    if (sec === 5.5 || sec === 10.5) {
+    if (sec == 5.5 || sec == 10.5) {
         stopwatch();
     } else {
         btn.style.display = "none";
