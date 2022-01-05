@@ -1,6 +1,5 @@
-let i = 0;
+let Typewriter = 0;
 const txt = 'KohakuChan';
-let bruh = true;
 
 document.onclick = () => applyCursorRippleEffect(event);
 
@@ -24,17 +23,10 @@ for (let i = 0; i < all.length; ++i) {
 }
 
 function typeWriter() {
-    if (i !== txt.length && bruh == true) {
+    if (Typewriter !== txt.length) {
         document.getElementById('writer').innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typeWriter, 150);
-    }
-    let word = document.getElementById('writer').innerHTML;
-    if (word == 'K' && bruh == true) {
-        bruh = false;
-        document.getElementById('writer').innerHTML += txt.charAt(i);
-        i--;
-        setTimeout(typeWriter, 150);
+        Typewriter++;
+        setTimeout(typeWriter, 95);
     }
 }
 
