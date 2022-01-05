@@ -28,7 +28,7 @@ function typeWriter() {
             setTimeout(typeWriter, 95);
         }
     } catch (e) { // bypass hehe genius
-        if (Typewriter < txts.length) {
+        if (Typewriter < txts.length+1) {
             console.log(e);
             document.getElementById('hmm').innerHTML += txts.charAt(Typewriter);
             Typewriter++;
