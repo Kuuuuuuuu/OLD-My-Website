@@ -26,13 +26,11 @@ function typeWriter() {
         document.getElementById('writer').innerHTML += txt.charAt(Typewriter);
         Typewriter++;
         setTimeout(typeWriter, 95);
-        return;
     }
     if (Typewriter !== txts.length) {
         document.getElementById('hmm').innerHTML += txts.charAt(Typewriter);
         Typewriter++;
         setTimeout(typeWriter, 95);
-        return;
     }
 }
 
