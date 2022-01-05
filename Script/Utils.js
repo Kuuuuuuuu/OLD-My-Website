@@ -28,6 +28,9 @@ function typeWriter() {
         document.getElementById('writer').innerHTML += txt.charAt(i);
         i++;
         setTimeout(typeWriter, speed);
+    } else {
+        i--;
+        setTimeout(typeWriter, speed);
     }
 }
 
