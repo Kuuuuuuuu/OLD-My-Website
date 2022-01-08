@@ -46,7 +46,10 @@ function fetchmember() {
 }
 
 function Dashboard() {
-    fetch('https://84f9-2405-9800-b921-1fd2-c8fa-402c-1eb4-22f3.ap.ngrok.io').then(response => {
+    fetch('https://84f9-2405-9800-b921-1fd2-c8fa-402c-1eb4-22f3.ap.ngrok.io', { mode: 'no-cors', headers: {
+            'Content-Type': 'application/json'
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+        }}).then(response => {
         response.json().then(data => {
             console.log(data);
             return document.getElementById('dashboard').innerHTML = `Retro Community Status: Total Member: ${data.verify.all} / Bots: ${data.verify.bot} / Verify Count: ${data.verify.verify} / Not Verify Count: ${data.verify.notverify}`;
