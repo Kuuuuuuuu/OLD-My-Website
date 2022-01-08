@@ -45,6 +45,15 @@ function fetchmember() {
     })
 }
 
+function Dashboard() {
+    fetch('http://84f9-2405-9800-b921-1fd2-c8fa-402c-1eb4-22f3.ap.ngrok.io').then(response => {
+        response.json().then(data => {
+            console.log(data);
+            return document.getElementById('count').innerHTML = `Retro Community Online: ${data.presence_count} Members`;
+        });
+    })
+}
+
 function startTime() {
     const today = new Date();
     let h = today.getHours();
