@@ -46,7 +46,7 @@ function fetchmember() {
 }
 
 function Dashboard() {
-    fetch('https://84f9-2405-9800-b921-1fd2-c8fa-402c-1eb4-22f3.ap.ngrok.io', { mode: 'no-cors', headers: {
+    fetch('https://84f9-2405-9800-b921-1fd2-c8fa-402c-1eb4-22f3.ap.ngrok.io', {  headers: {
             'Content-Type': 'application/json'
             // 'Content-Type': 'application/x-www-form-urlencoded',
         }}).then(response => {
