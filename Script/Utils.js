@@ -28,15 +28,10 @@ function typeWriter() {
             setTimeout(typeWriter, 95);
         }
     } catch (e) { // bypass hehe genius
-        try {
         if (Typewriter < txts.length) {
             document.getElementById('hmm').innerHTML += txts.charAt(Typewriter);
             Typewriter++;
             setTimeout(typeWriter, 95);
-        }
-        } catch (e) {
-            console.log(e);
-            return;
         }
     }
 }
