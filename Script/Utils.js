@@ -59,8 +59,7 @@ function Dashboard() {
             });
         })
     } catch (e) {
-        console.log(e);
-        return;
+        return  document.getElementById('dashboard').innerHTML = `Retro Community Status: Rest API error`;
     }
 }
 
