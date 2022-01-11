@@ -47,7 +47,7 @@ function fetchmember() {
 
 function Dashboard() {
     try {
-        fetch('https://4f6d-2405-9800-b921-1fd2-9975-c3c8-ae0b-64e0.ap.ngrok.io/', {
+        fetch('https://a8b7-2405-9800-b921-1fd2-312e-6506-83ca-10dc.ap.ngrok.io/', {
             headers: {
                 'Content-Type': 'application/json'
                 // 'Content-Type': 'application/x-www-form-urlencoded',
