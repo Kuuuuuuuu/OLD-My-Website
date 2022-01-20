@@ -55,7 +55,7 @@ function Dashboard() {
         }).then(response => {
             response.json().then(data => {
                 console.log(data);
-                return document.getElementById('dashboard').innerHTML = `Retro Community Status: Online: ${data.verify.online} / Offline: ${data.verify.offline} / Member: ${data.verify.all} / Bots: ${data.verify.bot} / Verify Count: ${data.verify.verify} / Not Verify Count: ${data.verify.notverify}`;
+                return document.getElementById('dashboard').innerHTML = `Retro Community Status: Member: ${data.verify.all} / Bots: ${data.verify.bot} / Verify Count: ${data.verify.verify} / Not Verify Count: ${data.verify.notverify}`;
             });
         })
     } catch (e) {
