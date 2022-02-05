@@ -6,6 +6,7 @@ const link = "nothing here only fake webhook are here";
 let click = 0;
 let sec = 5.5;
 let message = 0;
+let Start = false;
 let i = 0;
 
 clickElement.setAttribute("class", "box");
@@ -31,12 +32,12 @@ btn.style.display = "none";
     request.send(JSON.stringify(params));
 }*/
 
-function loop() {
+(function () {
     setInterval(() => {
         const timeboard = setInterval(() => {
             time.innerHTML = `${sec} Seconds Left`;
         }, 100);
-        if (sec > 0) {
+        if (sec > 0 && Start === true) {
             sec = sec - 0.5;
         }
         if (sec === 0) {
@@ -50,20 +51,21 @@ function loop() {
             })
             time.style.display = "none";
             if (message === 0) {
-                sendMessage();
+                //sendMessage();
                 message++;
             }
             i = 0;
+            Start = false;
             document.querySelector("h3").innerHTML = `Your click speed is ${click / 5} CPS<br>${click} clicks in 5 seconds `;
             clickElement.replaceWith(box);
         }
     }, 450);
-}
+})()
 
 box.addEventListener('click', function () {
-    if (sec === 5.5) {
-        loop();
+    if (sec === 5.5 && Start === false) {
         click = 0;
+        Start = true;
     }
     if (sec > 0) {
         btn.style.display = "none";
