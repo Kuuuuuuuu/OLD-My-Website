@@ -1,7 +1,7 @@
 const clickElement = document.createElement("button");
 const box = document.querySelector(".box");
 const time = document.querySelector(".time");
-const CPSUtils = document.getElementById("CPSUtils");
+const CPSUtils = document.getElementById("cps");
 const urlBox = document.getElementById("url");
 const btn = document.querySelector(".btn");
 const link = "nothing here only fake webhook are here";
