@@ -512,7 +512,7 @@ window.cash = function () {
 }();
 var Component = function () {
     function s(t, e, i) {
-        _classCallCheck(this, s), e instanceof Element || console.error(Error(e + " is not an HTML Element"));
+        _classCallCheck(this, s), e instanceof Element || console.error(Error(e + " is not an Page Element"));
         var n = t.getInstance(e);
         n && n.destroy(), this.el = e, this.$el = cash(e)
     }

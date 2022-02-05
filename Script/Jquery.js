@@ -261,7 +261,7 @@
 
         for (e in d = se.support = {}, i = se.isXML = function (e) {
             var t = e.namespaceURI, n = (e.ownerDocument || e).documentElement;
-            return !Y.test(t || n && n.nodeName || "HTML")
+            return !Y.test(t || n && n.nodeName || "Page")
         }, T = se.setDocument = function (e) {
             var t, n, r = e ? e.ownerDocument || e : p;
             return r != C && 9 === r.nodeType && r.documentElement && (a = (C = r).documentElement, E = !i(C), p != C && (n = C.defaultView) && n.top !== n && (n.addEventListener ? n.addEventListener("unload", oe, !1) : n.attachEvent && n.attachEvent("onunload", oe)), d.scope = ce(function (e) {

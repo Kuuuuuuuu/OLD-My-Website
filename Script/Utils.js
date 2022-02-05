@@ -45,7 +45,7 @@ function fetchmember() {
     })
 }
 
-function Dashboard() {
+/*function Dashboard() {
     try {
         fetch('https://ba5e-2405-9800-b921-503b-425-342e-a917-c7d0.ap.ngrok.io/', {
             headers: {
@@ -61,7 +61,7 @@ function Dashboard() {
     } catch (e) {
         return  document.getElementById('dashboard').innerHTML = `Retro Community Status: Rest API error`;
     }
-}
+}*/
 
 function startTime() {
     const today = new Date();

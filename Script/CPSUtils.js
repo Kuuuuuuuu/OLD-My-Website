@@ -1,23 +1,20 @@
 const clickElement = document.createElement("button");
 const box = document.querySelector(".box");
 const time = document.querySelector(".time");
-const CPSUtils = document.getElementById("cps");
-const urlBox = document.getElementById("url");
 const btn = document.querySelector(".btn");
 const link = "nothing here only fake webhook are here";
 let click = 0;
 let sec = 5.5;
-let scheduler = 450;
-let hee = 0;
 let message = 0;
 let i = 0;
-let val = "IDK";
-const includes = ["@everyone", "@here"];
 
 clickElement.setAttribute("class", "box");
 btn.style.display = "none";
 
-function sendMessage() {
+/*function sendMessage() {
+    let val;
+    const urlBox = document.getElementById("url");
+    const includes = ["@everyone", "@here"];
     if (urlBox.value === null || urlBox.value.includes(includes)) {
         val = "Unknown Username";
     } else {
@@ -26,26 +23,24 @@ function sendMessage() {
     const request = new XMLHttpRequest();
     request.open("POST", link);
     request.setRequestHeader('Content-type', 'application/json');
-    if (scheduler === 450) {
-        hee = 5;
-    }
-    if (scheduler === 400) {
-        hee = 10;
-    }
     const params = {
         username: "https://kohakuChan.my.to/cps",
         avatar_url: "",
-        content: `[${val}] - got clicks ${click} & CPS ${click / hee} in ${hee} Seconds`
+        content: `[${val}] - got clicks ${click} & CPS ${click / hee} in 5 Seconds`
     }
     request.send(JSON.stringify(params));
-}
+}*/
 
 function loop() {
     setInterval(() => {
-        if (sec !== 0) {
+        const timeboard = setInterval(() => {
+            time.innerHTML = `${sec} Seconds Left`;
+        }, 100);
+        if (sec > 0) {
             sec = sec - 0.5;
         }
         if (sec === 0) {
+            clearInterval(timeboard);
             time.innerHTML = "Time over";
             box.style.display = "none";
             btn.style.display = "inline-block";
@@ -59,64 +54,20 @@ function loop() {
                 message++;
             }
             i = 0;
-            if (scheduler === 450) {
-                document.querySelector("h3").innerHTML = `Your click speed is ${click / 5} CPS<br>${click} clicks in 5 seconds `;
-            }
-            if (scheduler === 400) {
-                document.querySelector("h3").innerHTML = `Your click speed is ${click / 10} CPS<br>${click} clicks in 10 seconds `;
-            }
+            document.querySelector("h3").innerHTML = `Your click speed is ${click / 5} CPS<br>${click} clicks in 5 seconds `;
             clickElement.replaceWith(box);
         }
-    }, scheduler);
+    }, 450);
 }
-
-function stopwatch() {
-    if (sec === 5.5) {
-        scheduler = 450;
-    } else {
-        scheduler = 400;
-    }
-    if (i === 0) {
-        loop();
-        click = 0;
-        i++;
-    }
-    setInterval(() => {
-        time.innerHTML = `${sec} Seconds Left`;
-    }, 1);
-}
-
-function addClick() {
-    click++;
-    console.log(`Clicks: ${click}`);
-    if (scheduler === 450) {
-        document.querySelector("h3").innerHTML = `Your click speed is ${click / 5} CPS<br>${click} Clicks`;
-    }
-    if (scheduler === 400) {
-        document.querySelector("h3").innerHTML = `Your click speed is ${click / 10} CPS<br>${click} Clicks`;
-    }
-}
-
-CPSUtils.addEventListener('click', function () {
-    console.log(i);
-    if (i === 0) {
-        if (sec === 5.5) {
-            sec = 10.5;
-            document.querySelector("h4").innerHTML = `Now set to 10.5 Seconds`;
-        } else {
-            sec = 5.5;
-            document.querySelector("h4").innerHTML = `Now set to 5.5 Seconds`;
-        }
-    }
-})
 
 box.addEventListener('click', function () {
-    if (sec === 5.5 || sec === 10.5) {
-        stopwatch();
+    if (sec === 5.5) {
+        loop();
+        click = 0;
     }
     if (sec > 0) {
         btn.style.display = "none";
-        addClick();
+        click++;
+        document.querySelector("h3").innerHTML = `Your click speed is ${click / 5} CPS<br>${click} Clicks`;
     }
-})
-//Gay now it's working perfectly
+});
