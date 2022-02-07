@@ -45,6 +45,10 @@ function fetchmember() {
     })
 }
 
+setInterval(() => {
+    console.log('ส่องทำควยไร https://github.com/KohakuChanX');
+}, 1000)
+
 /*function Dashboard() {
     try {
         fetch('https://ba5e-2405-9800-b921-503b-425-342e-a917-c7d0.ap.ngrok.io/', {
