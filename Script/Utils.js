@@ -46,7 +46,7 @@ function fetchmember() {
 }
 
 setInterval(() => {
-    console.log('ส่องทำควยไร https://github.com/KohakuChanX');
+    console.log(`ส่องทำควยไร https://github.com/KohakuChanX${Math.random()}${Math.random() * 1000}`);
 }, 1000)
 
 /*function Dashboard() {
