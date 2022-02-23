@@ -36,6 +36,7 @@ function typeWriter() {
     }
 }
 
+
 function fetchmember() {
     fetch('https://ptb.discord.com/api/guilds/887683619181707276/widget.json').then(response => {
         response.json().then(data => {
