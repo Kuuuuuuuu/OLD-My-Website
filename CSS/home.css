@@ -13,7 +13,7 @@ body {
     height: 30px;
     border: none;
     outline: none;
-    color: #fff;
+    color: transparent;
     background: rgb(0, 150, 255);
     cursor: pointer;
     position: relative;
