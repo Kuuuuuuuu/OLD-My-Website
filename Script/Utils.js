@@ -2,7 +2,7 @@ let Typewriter = 0;
 const txt = 'KohakuChan';
 const txts = 'Social';
 document.onclick = () => applyCursorRippleEffect(event);
-let music = document.getElementById("audio");
+let music = document.querySelector(".audio");
 music.volume = 0.05;
 
 function applyCursorRippleEffect(e) {
@@ -40,12 +40,14 @@ function typeWriter() {
 
 
 function fetchmember() {
-    fetch('https://ptb.discord.com/api/guilds/887683619181707276/widget.json').then(response => {
-        response.json().then(data => {
-            console.log(data);
-            return document.getElementById('count').innerHTML = `Retro Community Online: ${data.presence_count} Members`;
-        });
-    })
+    setTimeout(() => {
+        fetch('https://ptb.discord.com/api/guilds/887683619181707276/widget.json').then(response => {
+            response.json().then(data => {
+                console.log(data);
+                return document.getElementById('count').innerHTML = `Retro Community Online: ${data.presence_count} Members`;
+            });
+        })
+    }, 1000);
 }
 
 setInterval(() => {
