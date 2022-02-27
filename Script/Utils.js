@@ -2,7 +2,7 @@ let Typewriter = 0;
 const txt = 'KohakuChan';
 const txts = 'Social';
 document.onclick = () => applyCursorRippleEffect(event);
-let music = document.getElementById("music");
+let music = document.getElementById("audio");
 music.volume = 0.05;
 
 function applyCursorRippleEffect(e) {
