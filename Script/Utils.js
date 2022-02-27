@@ -2,8 +2,7 @@ let Typewriter = 0;
 const txt = 'KohakuChan';
 const txts = 'Social';
 document.onclick = () => applyCursorRippleEffect(event);
-let music = document.querySelector(".audio");
-music.volume = 0.05;
+document.getElementById("lol").volume = 0.05;
 
 function applyCursorRippleEffect(e) {
     const ripple = document.createElement("div");
