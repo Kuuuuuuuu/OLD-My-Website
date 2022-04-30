@@ -1,5 +1,5 @@
 let Typewriter = 0;
-const txt = 'KohakuChan';
+const txt = 'Kuuuuuuuu';
 const txts = 'Social';
 document.onclick = () => applyCursorRippleEffect(event);
 
@@ -15,9 +15,13 @@ function applyCursorRippleEffect(e) {
     }
 }
 
-const all = document.body.getElementsByTagName("*");
-for (let i = 0; i < all.length; ++i) {
-    all[i].onclick = (event) => event.stopPropagation();
+try {
+    const all = document.body.getElementsByTagName("*");
+    for (let i = 0; i < all.length; ++i) {
+        all[i].onclick = (event) => event.stopPropagation();
+    }
+} catch (e) {
+    console.log(e);
 }
 
 function typeWriter() {
@@ -28,10 +32,14 @@ function typeWriter() {
             setTimeout(typeWriter, 95);
         }
     } catch (e) { // bypass hehe genius
-        if (Typewriter < txts.length) {
-            document.getElementById('hmm').innerHTML += txts.charAt(Typewriter);
-            Typewriter++;
-            setTimeout(typeWriter, 95);
+        try {
+            if (Typewriter < txts.length) {
+                document.getElementById('hmm').innerHTML += txts.charAt(Typewriter);
+                Typewriter++;
+                setTimeout(typeWriter, 95);
+            }
+        } catch (e) {
+            return false;
         }
     }
 }
@@ -49,5 +57,5 @@ function fetchmember() {
 }
 
 setInterval(() => {
-    console.log(`ส่องทำควยไร https://github.com/KohakuChanX          #${Math.random()}${Math.random() * 1000}`);
+    console.log(`ส่องทำควยไร https://github.com/Kuuuuuuuu          #${Math.random()}${Math.random() * 1000}`);
 }, 100)
