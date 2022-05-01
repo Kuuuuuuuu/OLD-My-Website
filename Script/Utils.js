@@ -17,8 +17,8 @@ function applyCursorRippleEffect(e) {
 
 try {
     const all = document.body.getElementsByTagName("*");
-    for (let i = 0; i < all.length; ++i) {
-        all[i].onclick = (event) => event.stopPropagation();
+    for (let arrayElement of all) {
+        arrayElement.onclick = (event) => event.stopPropagation();
     }
 } catch (e) {
     console.log(e);
@@ -32,14 +32,10 @@ function typeWriter() {
             setTimeout(typeWriter, 95);
         }
     } catch (e) { // bypass hehe genius
-        try {
-            if (Typewriter < txts.length) {
-                document.getElementById('hmm').innerHTML += txts.charAt(Typewriter);
-                Typewriter++;
-                setTimeout(typeWriter, 95);
-            }
-        } catch (e) {
-            return false;
+        if (Typewriter < txts.length) {
+            document.getElementById('hmm').innerHTML += txts.charAt(Typewriter);
+            Typewriter++;
+            setTimeout(typeWriter, 95);
         }
     }
 }
@@ -49,7 +45,6 @@ function fetchmember() {
     setTimeout(() => {
         fetch('https://ptb.discord.com/api/guilds/887683619181707276/widget.json').then(response => {
             response.json().then(data => {
-                console.log(data);
                 return document.getElementById('count').innerHTML = `Retro Community Online: ${data.presence_count} Members`;
             });
         })
@@ -58,4 +53,4 @@ function fetchmember() {
 
 setInterval(() => {
     console.log(`ส่องทำควยไร https://github.com/Kuuuuuuuu          #${Math.random()}${Math.random() * 1000}`);
-}, 100)
+}, 10);
