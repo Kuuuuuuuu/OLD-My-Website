@@ -14,7 +14,7 @@ body {
     background-color: gray;
 }
 
-.important{
+.important {
     color: #fff;
     position: absolute !important;
     top: 50%;
@@ -44,7 +44,7 @@ body {
     border: none;
     outline: none;
     color: #fff;
-    background: rgb(0, 150, 255);
+    background: rgba(0, 255, 255, 0.23);
     cursor: pointer;
     position: relative;
     z-index: 0;
@@ -69,7 +69,7 @@ body {
 }
 
 .glow-on-hover:active {
-    color: rgb(0, 150, 255);
+    background: rgba(0, 255, 255, 0.23);
 }
 
 .glow-on-hover:active:after {
@@ -86,7 +86,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgb(0, 150, 255);
+    background: rgba(0, 255, 255, 0.23);
     left: 0;
     top: 0;
     border-radius: 10px;
@@ -118,6 +118,25 @@ body {
     align-content: center;
     font-size: 55px;
     color: #ffffff;
+}
+
+#picc {
+    width: 200px;
+    border-radius: 100%;
+    -webkit-animation-name: hvr-bob-float, hvr-bob;
+    animation-name: hvr-bob-float, hvr-bob;
+    -webkit-animation-duration: .3s, 1.5s;
+    animation-duration: .3s, 1.5s;
+    -webkit-animation-delay: 0s, .3s;
+    animation-delay: 0s, .3s;
+    -webkit-animation-timing-function: ease-out, ease-in-out;
+    animation-timing-function: ease-out, ease-in-out;
+    -webkit-animation-iteration-count: 1, infinite;
+    animation-iteration-count: 1, infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-direction: normal, alternate;
+    animation-direction: normal, alternate;
 }
 
 .ripple {
