@@ -27,9 +27,11 @@ function typeWriter() {
 function fetchmember() {
     setTimeout(() => {
         fetch("https://ptb.discord.com/api/guilds/887683619181707276/widget.json").then(t => {
-            t.json().then(t => document.getElementById("count").innerHTML = `Retro Community Online: ${t.presence_count} Members`)
-        })
-    }, 100)
+            t.json().then(t => {
+              document.getElementById("count").innerHTML = `Retro Community Online: ${t.presence_count} Members`;
+            });
+        });
+    }, 100);
 }
 
 setInterval(() => {
