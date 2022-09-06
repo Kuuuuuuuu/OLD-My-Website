@@ -19,7 +19,6 @@ try {
 
 function typeWriter() {
     const words = ["Kuuuuuuuu", "Nayuki"];
-    const len = words.length;
     let i = 0;
     let offset = 0;
     let forwards = true;
@@ -37,7 +36,7 @@ function typeWriter() {
             forwards = true;
             i++;
             offset = 0;
-            if (i >= len) {
+            if (i >= words.length) {
                 i = 0;
             }
         }
@@ -48,7 +47,9 @@ function typeWriter() {
                 offset--;
             }
         }
-        document.getElementById("Main-Text").innerHTML = words[i].substring(0, offset) + "!";
+        const text = words[i].substring(0, offset) + "!";
+        document.title = text
+        document.getElementById("Main-Text").innerHTML = text;
     }, 80);
 }
 
