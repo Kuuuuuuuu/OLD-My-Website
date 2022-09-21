@@ -17,7 +17,7 @@ try {
     console.log(t)
 }
 
-function typeWriter() {
+function typeWriter(words) {
     const words = ["Kuuuuuuuu", "Nayuki"];
     let i = 0;
     let offset = 0;

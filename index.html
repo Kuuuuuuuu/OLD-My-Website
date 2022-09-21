@@ -15,7 +15,8 @@
     <meta content="256" property="og:image:width">
     <meta content="256" property="og:image:height">
     <meta content="Hi" property="og:image:alt">
-    <link href="CSS/main.css" rel="stylesheet" />
+    <link href="CSS/loading.css" rel="stylesheet" />
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
     <link href="IMG/logo.png" rel="icon" />
     <link href="IMG/logo.png" rel="shortcut" />
     <link href="IMG/logo.png" rel="apple-touch-icon" />
@@ -23,18 +24,19 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 </head>
 <script defer src="Script/Utils.js"></script>
-<script>
-    setTimeout(() => {
-        document.location = "./home"
-    }, 1500);
-</script>
+<script defer src="Script/BootStrap.js"></script>
 
-<body>
-    <header id="preloader">
-        <div id="status">
-            <div class="loading"></div>
+<body class="jumbotron text-center bg-transparent text-white">
+    <div class="kuy">
+        <span class="dot"></span>
+        <div class="dots">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </header>
+        <br>
+        <p>Loading...</p>
+    </div>
 </body>
 
 </html>

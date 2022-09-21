@@ -1,0 +1,55 @@
+body {
+    background-image: radial-gradient(#383e3f, #383e3f);
+    color: transparent;
+    text-align: center;
+    margin: 0;
+}
+
+.kuy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 142px;
+    height: 40px;
+    margin: -20px 0 0 -71px;
+}
+
+.dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 12px;
+    background: aqua;
+    border-radius: 50%;
+    transform: translateX(0);
+    animation: dot 1.8s infinite;
+}
+
+.dots {
+    transform: translateX(0);
+    margin-top: 12px;
+    margin-left: 31px;
+    animation: dots 1.8s infinite;
+}
+
+span {
+    display: block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-left: 16px;
+    background: aqua;
+    border-radius: 50%;
+}
+
+@keyframes dot {
+    50% {
+        transform: translateX(83px);
+    }
+}
+
+@keyframes dots {
+    50% {
+        transform: translateX(-43px);
+    }
+}
