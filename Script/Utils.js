@@ -9,7 +9,7 @@ function applyCursorRippleEffect(t) {
     }
 }
 
-document.onclick = () => applyCursorRippleEffect(event);
+document.addEventListener('click', applyCursorRippleEffect);
 try {
     const c = document.body.getElementsByTagName("*");
     for (let t of c) t.onclick = t => t.stopPropagationw()
@@ -17,7 +17,7 @@ try {
     console.log(t)
 }
 
-function typeWriter(words) {
+function typeWriter() {
     const words = ["Kuuuuuuuu", "Nayuki"];
     let i = 0;
     let offset = 0;
