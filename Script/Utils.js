@@ -12,9 +12,9 @@ function applyCursorRippleEffect(t) {
 document.addEventListener('click', applyCursorRippleEffect);
 try {
     const c = document.body.getElementsByTagName("*");
-    for (let t of c) t.onclick = t => t.stopPropagationw()
+    for (let t of c) t.onclick = t => t.stopPropagationw();
 } catch (t) {
-    console.log(t)
+    console.log(t);
 }
 
 function typeWriter() {
@@ -57,8 +57,8 @@ function fetchgithubdata() {
     setTimeout(() => {
         fetch("https://api.github.com/users/Kuuuuuuuu").then(t => {
             t.json().then(t => {
-                document.getElementById("count").innerHTML = `My Github Stats <br>Followers: ${t.followers}<br>Following: ${t.following}<br>Public Repos: ${t.public_repos}`
+                document.querySelector(".Github-Stats").innerHTML = `My Github Stats <br>Followers: ${t.followers}<br>Following: ${t.following}<br>Public Repos: ${t.public_repos}`;
             });
         });
-    }, 100);
+    }, 300);
 }
