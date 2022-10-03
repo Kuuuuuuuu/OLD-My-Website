@@ -17,42 +17,6 @@ try {
     console.log(t);
 }
 
-function typeWriter() {
-    const words = ["Kuuuuuuuu", "Nayuki"];
-    let i = 0;
-    let offset = 0;
-    let forwards = true;
-    let skip_count = 0;
-    setInterval(() => {
-        if (forwards) {
-            if (offset >= words[i].length) {
-                skip_count++;
-                if (skip_count === 20) {
-                    forwards = false;
-                    skip_count = 0;
-                }
-            }
-        } else if (offset === 0) {
-            forwards = true;
-            i++;
-            offset = 0;
-            if (i >= words.length) {
-                i = 0;
-            }
-        }
-        if (skip_count === 0) {
-            if (forwards) {
-                offset++;
-            } else {
-                offset--;
-            }
-        }
-        const text = words[i].substring(0, offset) + "!";
-        document.title = text
-        document.getElementById("Main-Text").innerHTML = text;
-    }, 80);
-}
-
 function fetchgithubdata() {
     setTimeout(() => {
         fetch("https://api.github.com/users/Kuuuuuuuu").then(t => {
