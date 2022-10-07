@@ -1,6 +1,5 @@
 # My-Website
 
-This Website is learning coding just nothing 
-
+Just My Personal Website 🌱
 
 beta react: https://react.nayukikuu.xyz
