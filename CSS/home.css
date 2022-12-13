@@ -25,20 +25,19 @@ body {
 
 .social .icon {
     position: relative;
-    background: rgba(0, 174, 255, 0.397);
+    background: rgba(255, 174, 0, 0.397);
     color: #ffffff;
-    border-radius: 40%;
+    border-radius: 20%;
     margin: 10px;
     width: 50px;
     height: 50px;
     font-size: 20px;
-    left: -10%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .social .discord:hover,
@@ -196,7 +195,8 @@ html {
     animation-direction: normal, alternate;
 }
 
-#Main-IMG {
+.logo {
+    margin: auto;
     width: 200px;
     border-radius: 100%;
     -webkit-animation-name: bob-float, bob;
@@ -223,9 +223,9 @@ html {
     position: relative;
     color: white;
     font-size: 3.5em;
-    left: 2%;
+    left: 3%;
     letter-spacing: 0.25em;
-    animation: glitch-skew 1s infinite linear alternate-reverse;
+    animation: glitch-skew 2s infinite linear alternate-reverse;
 }
 
 .glitch::before {
@@ -235,9 +235,9 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    text-shadow: -2px 0 #ff00c1;
+    text-shadow: -2px 0 #ffae00;
     clip: rect(44px, 450px, 56px, 0);
-    animation: glitch-anim 5s infinite linear alternate-reverse;
+    animation: glitch-anim 6s infinite linear alternate-reverse;
 }
 
 .glitch::after {
@@ -247,8 +247,8 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
-    animation: glitch-anim2 1s infinite linear alternate-reverse;
+    text-shadow: -2px 0 #00fff9, 2px 2px #ffae00;
+    animation: glitch-anim2 2s infinite linear alternate-reverse;
 }
 
 @keyframes glitch-anim {
