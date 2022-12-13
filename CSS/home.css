@@ -19,7 +19,8 @@ body {
 }
 
 .social {
-    display: inline-flex;
+    display: table;
+    margin: auto;
     list-style: none;
 }
 
@@ -28,11 +29,12 @@ body {
     background: rgba(255, 174, 0, 0.397);
     color: #ffffff;
     border-radius: 20%;
-    margin: 10px;
+    margin: 5px;
     width: 50px;
     height: 50px;
+    right: 18px;
     font-size: 20px;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
