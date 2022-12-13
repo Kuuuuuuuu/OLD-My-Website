@@ -16,13 +16,3 @@ try {
 } catch (t) {
     console.log(t);
 }
-
-function fetchgithubdata() {
-    setTimeout(() => {
-        fetch("https://api.github.com/users/Kuuuuuuuu").then(t => {
-            t.json().then(t => {
-                document.querySelector(".Github-Stats").innerHTML = `My Github Stats <br>Followers: ${t.followers}<br>Following: ${t.following}<br>Public Repos: ${t.public_repos}`;
-            });
-        });
-    }, 300);
-}

@@ -1,12 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
-
-body {
-    font-family: 'JetBrains Mono', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    background-color: #000;
-}
+@import url('./base.css');
 
 .loader {
     animation: spin 0.5s linear infinite;

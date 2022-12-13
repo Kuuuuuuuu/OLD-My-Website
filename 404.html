@@ -25,15 +25,21 @@
     <link href="CSS/home.css" rel="stylesheet">
     <script defer src="Script/Utils.js"></script>
     <script>
-        setTimeout(() => {
-            document.location = "./home"
-        }, 3000);
+        let sec = 2;
+        setInterval(() => {
+            sec--;
+            document.getElementById("sec-text").innerText = "Redirect in " + sec + "..";
+            document.getElementById("sec-text").setAttribute("data-text", "Redirect in " + sec + "..");
+            if (sec < 1) {
+                window.location.href = "https://nayukikuu.xyz";
+            }
+        }, 1000);
     </script>
 </head>
 
 <body>
     <h1 class="glitch" data-text="404 Not Found">404 Not Found</h1>
-    <h1 class="glitch" data-text="Redirect in 3..">Redirect in 3..</h1>
+    <h1 class="glitch" id="sec-text" data-text="Redirect in 3..">Redirect in 3..</h1>
 </body>
 
 </html>

@@ -1,21 +1,12 @@
-/*noinspection CssUnknownTarget*/
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
+@import url('./base.css');
 
-body {
-    font-family: 'JetBrains Mono', system-ui;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    color: #eee;
-    cursor: url("data:image/svg+xml,%3Csvg height='6' width='6' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' fill='%23eee' r='4'/%3E%3C/svg%3E") 3 3, auto;
-    background-color: #000000;
-}
 
 ::-webkit-scrollbar {
     width: 0;
 }
 
 .container {
+    text-align: center;
     position: relative;
     max-width: auto;
     margin: auto;
@@ -49,7 +40,15 @@ body {
     }
 }
 
-#IMG-Discordbot {
+.project-info {
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+.project-img {
+    margin: auto;
+    display: block;
     width: 140px;
     border-radius: 20%;
     -webkit-animation-name: bob-float, bob;
