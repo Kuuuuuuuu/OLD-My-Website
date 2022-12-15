@@ -16,3 +16,31 @@ try {
 } catch (t) {
     console.log(t);
 }
+
+document.addEventListener('contextmenu', (event) => {
+    event.preventDefault();
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.ctrlKey && (event.key === "S" || event.key === "s")) {
+        event.preventDefault();
+    }
+    if (event.ctrlKey && (event.key === "C" || event.key === "c")) {
+        event.preventDefault();
+    }
+    if (event.ctrlKey && (event.key === "E" || event.key === "e")) {
+        event.preventDefault();
+    }
+    if (event.ctrlKey && (event.key === "I" || event.key === "i")) {
+        event.preventDefault();
+    }
+    if (event.ctrlKey && (event.key === "K" || event.key === "k")) {
+        event.preventDefault();
+    }
+    if (event.ctrlKey && (event.key === "U" || event.key === "u")) {
+        event.preventDefault();
+    }
+    if (event.key.includes("F12")) {
+        event.preventDefault();
+    }
+});

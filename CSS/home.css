@@ -20,7 +20,6 @@ body {
 
 .social {
     display: table;
-    margin: auto;
     list-style: none;
 }
 
@@ -29,11 +28,10 @@ body {
     background: rgba(255, 174, 0, 0.397);
     color: #ffffff;
     border-radius: 20%;
-    margin: 5px;
     width: 50px;
     height: 50px;
-    right: 18px;
     font-size: 20px;
+    margin: 0.95px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -52,7 +50,7 @@ body {
 .social .github:hover,
 .social .github:hover,
 .social .github:hover {
-    background: #ffae00;
+    background: #00b7ff;
     color: #ffffff;
 }
 
