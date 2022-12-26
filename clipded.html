@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <title>คลิปเด็ด</title>
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;900&display=swap" rel="stylesheet">
+  <style>
+    p {
+      margin: 0;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    .overlay,
+    .scare {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .overlay-button {
+      margin: auto;
+      align-items: center;
+      height: 40px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1;
+      border-radius: 10%;
+      margin: 4px;
+      cursor: pointer;
+      width: 120px;
+      height: 60px;
+    }
+
+    .overlay-buttons-wrapper {
+      margin: 24px -8px -8px;
+    }
+
+    #accept-button {
+      background-color: rgb(132, 94, 194);
+      color: white;
+    }
+
+    .overlay-body {
+      max-width: 512px;
+      text-align: center;
+      font-family: "Inter", sans-serif;
+    }
+
+    .overlay[hidden] {
+      display: none;
+    }
+
+    .overlay {
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #000000;
+      padding-right: 24px;
+      padding-left: 24px;
+    }
+
+    input {
+      color: white;
+      border-radius: 6%;
+    }
+
+    .scare {
+      z-index: 1;
+    }
+
+    h1,
+    h3,
+    h4 {
+      color: white;
+    }
+
+    video#video {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    video#video::-webkit-media-controls-enclosure {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay" id="overlay">
+    <div class="overlay-body">
+      <div class="overlay-buttons-wrapper">
+        <h1 style="color:red">เว็บนี้ต้องอายุ 18 ปีขึ้นไป</h3>
+          <br>
+          <br>
+          <img src="https://profile-counter.glitch.me/ghostwebna/count.svg">
+          <br>
+          <br>
+          <br>
+          <button class="overlay-button" id="accept-button">กดเพื่อดู</button>
+          <br>
+          <br>
+          <h3>กรุณาใส่อายุ
+        </h1>
+        <input type="" id="inputt" name="กรุณาใส่อายุ" value="0">
+        <h4 id="ini"></h4>
+      </div>
+    </div>
+  </div>
+  <div class="scare">
+    <video class="video" id="video" loop src="./Assets/video.mp4"></video>
+  </div>
+  <script>
+    const video = document.getElementById("video");
+    const overlay = document.getElementById("overlay");
+    const acceptButton = document.getElementById("accept-button");
+
+    let hasClicked = false;
+
+    window.onbeforeunload = function() {
+      if (hasClicked) return true;
+    };
+
+    function buttonClick(event) {
+      if (!Number.isInteger(Number(document.getElementById('inputt').value)) || document.getElementById('inputt').value === "" || !document.getElementById('inputt').value) {
+        document.getElementById('ini').innerHTML = "โปรดใส่อายุ";
+        setTimeout(() => {
+          document.getElementById('ini').innerHTML = "";
+        }, 2000);
+      } else {
+        if (Number(document.getElementById('inputt').value < 18)) {
+          document.getElementById('ini').innerHTML = "โปรดใส่อายุ";
+          setTimeout(() => {
+            document.getElementById('ini').innerHTML = "";
+          }, 2000);
+        } else {
+          event.preventDefault();
+          if (!hasClicked) {
+            hasClicked = true;
+          }
+          overlay.hidden = true;
+          video.play();
+          videoClick();
+        }
+      }
+    }
+
+    function videoClick(event) {
+      if (event) {
+        event.preventDefault();
+      }
+      const {
+        documentElement
+      } = document;
+      if (documentElement.requestFullscreen) {
+        documentElement.requestFullscreen();
+      } else if (documentElement.mozRequestFullScreen) {
+        documentElement.mozRequestFullScreen();
+      } else if (documentElement.webkitRequestFullscreen) {
+        documentElement.webkitRequestFullscreen();
+      } else if (documentElement.msRequestFullscreen) {
+        documentElement.msRequestFullscreen();
+      }
+    }
+    acceptButton.addEventListener("click", buttonClick);
+    video.addEventListener("click", videoClick);
+  </script>
+</body>
+
+</html>
